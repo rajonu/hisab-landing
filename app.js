@@ -226,6 +226,20 @@ function applyPreset(idx) {
     demoPromptText.textContent = currentLang === 'bn'
       ? `“${preset.customer}র জমা হিসেবে ${preset.amount.replace('৳ ', '')} টাকা উঠাবো?”`
       : `“Record ${preset.amount} payment received from ${preset.customer}?”`;
+  } else if (preset.type === 'personal_paoana') {
+    demoTypeBadge.className = 'badge-tag-payment';
+    demoTypeBadge.textContent = currentLang === 'bn' ? 'পাওনা (Receivable)' : 'Receivable (পাওনা)';
+    demoAmountVal.style.color = 'var(--color-payment-green)';
+    demoPromptText.textContent = currentLang === 'bn'
+      ? `“${preset.customer}কে ${preset.amount.replace('৳ ', '')} টাকা ধার হিসেবে উঠাবো?”`
+      : `“Record ${preset.amount} lent to ${preset.customer}?”`;
+  } else if (preset.type === 'personal_dena') {
+    demoTypeBadge.className = 'badge-tag-credit';
+    demoTypeBadge.textContent = currentLang === 'bn' ? 'দেনা (Payable)' : 'Payable / Debt (দেনা)';
+    demoAmountVal.style.color = 'var(--color-debt-red)';
+    demoPromptText.textContent = currentLang === 'bn'
+      ? `“${preset.customer}র থেকে ${preset.amount.replace('৳ ', '')} টাকা ধার নেওয়া হিসেবে সেভ করবো?”`
+      : `“Record ${preset.amount} borrowed from ${preset.customer}?”`;
   } else {
     demoTypeBadge.className = 'badge-tag-cash';
     demoTypeBadge.textContent = currentLang === 'bn' ? 'নগদ (Cash)' : 'Cash (নগদ)';

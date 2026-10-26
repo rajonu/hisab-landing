@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>হিসাববট ব্যবহার নির্দেশিকা ও টিউটোরিয়াল | HisabBot User Guide</title>
+  
+  <meta name="description" content="হিসাববট (HisabBot) ব্যবহারের পূর্ণাঙ্গ নির্দেশিকা। দোকান ও ব্যক্তিগত দেনা-পাওনার হিসাব কথা বলে রাখা, মাস শেষের রিপোর্ট এবং হোয়াটসঅ্যাপ-এসএমএস তাগাদার বিস্তারিত গাইড।">
+  <meta name="keywords" content="HisabBot guide, হিসাববট টিউটোরিয়াল, দোকান খাতা নিয়ম, ব্যক্তিগত দেনা পাওনা, bangla voice ledger guide">
+  <meta name="theme-color" content="#1B5E20">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="হিসাববট ব্যবহার নির্দেশিকা ও টিউটোরিয়াল | HisabBot User Guide">
+  <meta property="og:description" content="কথা বলে দোকান ও ব্যক্তিগত দেনা-পাওনার হিসাব রাখার সহজ উপায় ও নির্দেশিকা।">
+  <meta property="og:image" content="/ic_hisabbot_logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/ic_hisabbot_logo.png">
+  <link rel="apple-touch-icon" href="/ic_hisabbot_logo.png">
+
+  <!-- Google Fonts: Hind Siliguri & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="lang-bn">
+
+  <!-- ========================================================================
+       Sticky Glass Navigation
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-link" aria-label="HisabBot Home">
+        <img src="/ic_hisabbot_logo.png" alt="HisabBot Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-name">হিসাববট</span>
+          <span class="brand-byline">by KothaBot</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="/">মূল পাতা</a>
+        <a href="/#demo">লাইভ ডেমো</a>
+        <a href="/#features">ফিচারসমূহ</a>
+        <a href="/guide.html" style="color:var(--color-primary);font-weight:700">ব্যবহার নির্দেশিকা</a>
+        <a href="/#faq">প্রশ্নোত্তর</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="guideLangSwitchBtn" class="lang-toggle-btn" aria-label="Switch Language" onclick="toggleGuideLang()">
+          <span id="guideLangLabel">English</span>
+        </button>
+
+        <a href="/#download" class="btn-header-cta">
+          অ্যাপ ডাউনলোড
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         Guide Header Hero
+         ======================================================================== -->
+    <section class="guide-header-hero">
+      <div class="container">
+        <div class="guide-hero-badge">
+          <span>📚 অফিসিয়াল টিউটোরিয়াল ও সহায়িকা</span>
+        </div>
+
+        <h1 class="guide-hero-title" id="pageMainHeading">
+          হিসাববট ব্যবহারের পূর্ণাঙ্গ নির্দেশিকা
+        </h1>
+
+        <p class="guide-hero-desc" id="pageSubHeading">
+          দোকানের বাকি-জমা কিংবা ব্যক্তিগত দেনা-পাওনা—মুখের সাধারণ বাংলায় বলুন আর মুহূর্তেই নিখুঁত হিসাব রাখুন। সেভ করার আগে যাচাই, মাস শেষের রিপোর্ট এবং হোয়াটসঅ্যাপ তাগাদার ধাপে ধাপে ব্যবহার শিখুন।
+        </p>
+
+        <div class="guide-tabs-bar">
+          <button class="guide-tab-btn active" id="tabBn" onclick="switchGuideTab('bn')">বাংলা নির্দেশিকা (Bangla)</button>
+          <button class="guide-tab-btn" id="tabEn" onclick="switchGuideTab('en')">English Documentation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Main Guide Content Area
+         ======================================================================== -->
+    <div class="container">
+      <div class="guide-main-layout">
+
+        <!-- Left Sticky TOC Sidebar (Desktop) -->
+        <aside class="guide-sidebar">
+          <div class="guide-toc-title" id="tocHeading">সূচিপত্র (TOC)</div>
+          <nav class="guide-toc-nav" id="tocNavLinks">
+            <a href="#sec-dual-mode" class="guide-toc-link">১. ডুয়েল মোড (দোকান ও ব্যক্তিগত)</a>
+            <a href="#sec-voice-commands" class="guide-toc-link">২. কথা বলে হিসাব রাখার নিয়ম</a>
+            <a href="#sec-guardrail" class="guide-toc-link">৩. নিশ্চিতকরণ গার্ডরেল</a>
+            <a href="#sec-reminders" class="guide-toc-link">৪. বকেয়া তাগাদা (কল/WhatsApp/SMS)</a>
+            <a href="#sec-reports" class="guide-toc-link">৫. মাস শেষের রিপোর্ট ও এজিং</a>
+            <a href="#sec-security" class="guide-toc-link">৬. নিরাপত্তা ও পিন লক</a>
+            <a href="#sec-screenshot-howto" class="guide-toc-link">📸 স্ক্রিনশট নেওয়ার উপায়</a>
+          </nav>
+        </aside>
+
+        <!-- Right Article Content -->
+        <div class="guide-article">
+
+          <!-- ==================================================================
+               BANGLA VERSION CONTENT
+               ================================================================== -->
+          <div id="contentBn" class="guide-lang-section active">
+
+            <!-- Section 1: Dual Mode -->
+            <section id="sec-dual-mode" class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">১</span>
+                <h2 class="guide-section-title">ব্যক্তিগত ও ব্যবসায়িক ডুয়েল মোড (Dual Mode Setup)</h2>
+              </div>
+              <p class="guide-section-intro">
+                হিসাববট শুধুমাত্র দোকানদার ভাইদের জন্যই নয়, সাধারণ ব্যক্তি ও চাকরিজীবীদের ব্যক্তিগত ধার-দেনার হিসাব রাখার জন্যও তৈরি করা হয়েছে। অ্যাপ ইনস্টল করার পর প্রথম স্ক্রিনেই আপনি নির্বাচন করতে পারবেন কোন ধরণের খাতা আপনি চালু করতে চান।
+              </p>
+
+              <div class="voice-commands-grid">
+                <div class="voice-command-card" style="border-top:3px solid #0284c7">
+                  <span class="command-mode-tag tag-business">🏪 দোকান / ব্যবসায়ী মোড (Business Mode)</span>
+                  <div style="font-weight:700;color:var(--text-primary);margin-top:0.25rem">দোকানের খাতা:</div>
+                  <div class="command-result-desc">
+                    • কাস্টমারের বাকি (Credit)<br>
+                    • পুরাতন বাকি আদায় বা জমা (Payment)<br>
+                    • দৈনন্দিন নগদ বিক্রি (Cash Sale)<br>
+                    • কাস্টমারভিত্তিক লেজার ও ব্যালেন্স
+                  </div>
+                </div>
+
+                <div class="voice-command-card" style="border-top:3px solid #d97706">
+                  <span class="command-mode-tag tag-personal">👤 ব্যক্তিগত মোড (Personal Mode)</span>
+                  <div style="font-weight:700;color:var(--text-primary);margin-top:0.25rem">ব্যক্তিগত ধার-দেনার খাতা:</div>
+                  <div class="command-result-desc">
+                    • <strong>পাওনা (Receivable):</strong> বন্ধু, আত্মীয় বা কাউকে ধার দেওয়া টাকা<br>
+                    • <strong>দেনা (Payable):</strong> কারো কাছ থেকে ধার বা লোন নেওয়া টাকা<br>
+                    • ধারের টাকা ফেরত পাওয়া বা পরিশোধ করা
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot Slot 1 -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">📱</div>
+                <span class="slot-tag">স্ক্রিনশট স্লট ১</span>
+                <div class="slot-title">মোড নির্বাচন স্ক্রিন (Setup Mode: Business vs Personal)</div>
+                <div class="slot-caption">
+                  অ্যাপ ইনস্টল করার পর দোকান বা ব্যক্তিগত খাতা বেছে নেওয়ার ইন্টারফেস স্ক্রিনশট এখানে প্রদর্শিত হবে।
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 2: Voice Entry & Command Directory -->
+            <section id="sec-voice-commands" class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">২</span>
+                <h2 class="guide-section-title">কথা বলে হিসাব রাখার নিয়ম (বাস্তব ভয়েস কমান্ড)</h2>
+              </div>
+              <p class="guide-section-intro">
+                কোনো কিছু টাইপ করার প্রয়োজন নেই। হোম স্ক্রিনের বড় মাইক বাটনে একবার চাপ দিয়ে স্বাভাবিক বাংলায় বলুন। উন্নত Gemini AI স্বয়ংক্রিয়ভাবে নাম, টাকার পরিমাণ এবং লেনদেনের ধরন আলাদা করে নেয়।
+              </p>
+
+              <h4 style="margin:1.5rem 0 0.75rem;color:var(--color-primary-dark)">🏪 দোকান মোডের নমুনা বাক্য:</h4>
+              <div class="voice-commands-grid">
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-business">বাকি (Credit)</span>
+                  <div class="spoken-quote">🎙️ “রহিম আজকে ৫০০ টাকা বাকি নিছে”</div>
+                  <div class="command-result-desc">✓ গ্রাহক: রহিম ভাই | পরিমাণ: ৳ ৫০০ | ধরন: বাকি</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-business">জমা (Payment)</span>
+                  <div class="spoken-quote">🎙️ “করিম ভাই ১০০০ টাকা জমা দিল”</div>
+                  <div class="command-result-desc">✓ গ্রাহক: করিম ভাই | পরিমাণ: ৳ ১,০০০ | ধরন: জমা</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-business">নগদ ক্যাশ (Cash Sale)</span>
+                  <div class="spoken-quote">🎙️ “আকাশ নগদ বিক্রি ২৫০ টাকা”</div>
+                  <div class="command-result-desc">✓ গ্রাহক: আকাশ | পরিমাণ: ৳ ২৫০ | ধরন: নগদ</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-business">নোটসহ বাকি</span>
+                  <div class="spoken-quote">🎙️ “সালাম ভাই চাল ও চিনি বাকি ৩০০ টাকা”</div>
+                  <div class="command-result-desc">✓ গ্রাহক: সালাম ভাই | নোট: চাল ও চিনি | পরিমাণ: ৳ ৩০০</div>
+                </div>
+              </div>
+
+              <h4 style="margin:2rem 0 0.75rem;color:#b45309">👤 ব্যক্তিগত মোডের নমুনা বাক্য (ধার-দেনা):</h4>
+              <div class="voice-commands-grid">
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-personal">পাওনা (ধার দেওয়া)</span>
+                  <div class="spoken-quote">🎙️ “সাকিবকে ৫০০০ টাকা ধার দিলাম”</div>
+                  <div class="command-result-desc">✓ ব্যক্তি: সাকিব | পরিমাণ: ৳ ৫,০০০ | ধরন: পাওনা (Receivable)</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-personal">দেনা (ধার নেওয়া)</span>
+                  <div class="spoken-quote">🎙️ “মামার থেকে ২০০০ টাকা ধার নিলাম”</div>
+                  <div class="command-result-desc">✓ ব্যক্তি: মামা | পরিমাণ: ৳ ২,০০০ | ধরন: দেনা (Payable)</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-personal">ধার ফেরত পাওয়া</span>
+                  <div class="spoken-quote">🎙️ “সাকিব ১০০০ টাকা ফেরত দিল”</div>
+                  <div class="command-result-desc">✓ ব্যক্তি: সাকিব | পরিমাণ: ৳ ১,০০০ | ধরন: পাওনা আদায়</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-personal">ধার পরিশোধ করা</span>
+                  <div class="spoken-quote">🎙️ “মামাকে ১০০০ টাকা ফেরত দিলাম”</div>
+                  <div class="command-result-desc">✓ ব্যক্তি: মামা | পরিমাণ: ৳ ১,০০০ | ধরন: দেনা পরিশোধ</div>
+                </div>
+              </div>
+
+              <!-- Screenshot Slot 2 -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">🎙️</div>
+                <span class="slot-tag">স্ক্রিনশট স্লট ২</span>
+                <div class="slot-title">ভয়েস ইনপুট ও লাইভ সাউন্ড-ওয়েভ স্ক্রিন</div>
+                <div class="slot-caption">
+                  মাইকে চাপ দিয়ে কথা বলার সময় লাইভ অডিও ওয়েভ ও রিয়েলটাইম স্পিচ ইন্টারপ্রিটেশন স্ক্রিনশট এখানে যুক্ত হবে।
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 3: Verification Guardrail -->
+            <section id="sec-guardrail" class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">৩</span>
+                <h2 class="guide-section-title">নিশ্চিতকরণ গার্ডরেল (ভুল এড়াতে সেভ করার আগে যাচাই)</h2>
+              </div>
+              <p class="guide-section-intro">
+                হিসাববটের সবচেয়ে বড় নিরাপত্তা হলো—<strong>আপনার চোখের সামনে মিলিয়ে দেখা ও অনুমোদন ছাড়া কোনো হিসাবই খাতায় সেভ হয় না</strong>। মুখে কথা বলার সাথে সাথেই অ্যাপটি একটি পরিষ্কার কার্ডে বিস্তারিত দেখায় এবং ভয়েসে পড়ে শোনায়।
+              </p>
+
+              <div style="background:#f8fafc;border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.5rem">
+                <h4 style="margin:0 0 0.5rem;color:var(--text-primary)">যাচাইকরণ কার্ডে যা যা দেখতে পাবেন:</h4>
+                <ul style="padding-left:1.25rem;line-height:1.8;color:var(--text-secondary)">
+                  <li><strong>নাম / কাস্টমার:</strong> কার নামে হিসাব উঠছে (যেমন: রহিম ভাই বা সাকিব)।</li>
+                  <li><strong>লেনদেনের ধরন:</strong> রঙিন ব্যাজে স্পষ্ট বাকি, জমা, দেনা নাকি পাওনা।</li>
+                  <li><strong>টাকার পরিমাণ:</strong> বড় অক্ষরে টাকার পরিমাণ (যেমন: ৳ ৫০০)।</li>
+                  <li><strong>নোট / বিবরণ:</strong> পণ্য বা কারণ (যেমন: চাল ও ডাল)।</li>
+                  <li><strong>অডিও কনফার্মেশন:</strong> স্পিকারে স্বয়ংক্রিয়ভাবে শোনাবে: <em>“রহিম ভাইয়ের খাতায় ৫০০ টাকা বাকি উঠাবো?”</em></li>
+                </ul>
+              </div>
+
+              <div style="display:flex;gap:1rem;flex-wrap:wrap">
+                <div style="flex:1;min-width:240px;background:#f0fdf4;border:1px solid #bbf7d0;padding:1rem;border-radius:var(--radius-md)">
+                  <strong style="color:#166534">✓ ঠিক আছে (Confirm):</strong> চাপলে সাথে সাথে লোকাল ডাটাবেজে স্থায়ীভাবে রেকর্ড সেভ হবে।
+                </div>
+                <div style="flex:1;min-width:240px;background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:var(--radius-md)">
+                  <strong style="color:#991b1b">✕ বাতিল (Cancel):</strong> কোনো গরমিল থাকলে বাতিল বাটনে চাপুন, খাতায় কিছুই যুক্ত হবে না।
+                </div>
+              </div>
+
+              <!-- Screenshot Slot 3 -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">🛡️</div>
+                <span class="slot-tag">স্ক্রিনশট স্লট ৩</span>
+                <div class="slot-title">যাচাইকরণ ও কনফার্মেশন পপআপ (Verification Guardrail)</div>
+                <div class="slot-caption">
+                  ভয়েস শোনার পর স্ক্রিনে 'ঠিক আছে' ও 'বাতিল' বাটনসহ ডাটা কার্ডের স্ক্রিনশট এখানে বসবে।
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 4: Reminders & Alerts -->
+            <section id="sec-reminders" class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">৪</span>
+                <h2 class="guide-section-title">বকেয়া তাগাদা (১-ক্লিক কল, WhatsApp ও SMS)</h2>
+              </div>
+              <p class="guide-section-intro">
+                কাস্টমারের কাছ থেকে বাকি টাকা আদায় করার জন্য কিংবা বন্ধুর থেকে ধারের টাকা চাইতে লজ্জা পাওয়ার দিন শেষ। হিসাববটে প্রতিটি প্রোফাইল থেকে ১ ক্লিকেই প্রফেশনাল তাগাদা পাঠানো যায়।
+              </p>
+
+              <div class="voice-commands-grid">
+                <div class="voice-command-card">
+                  <div style="font-size:1.5rem">📞</div>
+                  <div style="font-weight:700;color:var(--text-primary)">সরাসরি ফোন কল (Direct Call)</div>
+                  <div class="command-result-desc">নাম্বার টাইপ না করে এক ক্লিকে ফোনের ডায়ালপ্যাডে কাস্টমারকে কল করুন।</div>
+                </div>
+
+                <div class="voice-command-card">
+                  <div style="font-size:1.5rem">💬</div>
+                  <div style="font-weight:700;color:var(--text-primary)">হোয়াটসঅ্যাপ তাগাদা (WhatsApp)</div>
+                  <div class="command-result-desc">ভদ্র ও মার্জিত ভাষায় মোট বাকি টাকার হিসাব স্বয়ংক্রিয়ভাবে মেসেজ ড্রাফট হয়ে হোয়াটসঅ্যাপে ওপেন হবে।</div>
+                </div>
+
+                <div class="voice-command-card">
+                  <div style="font-size:1.5rem">✉️</div>
+                  <div style="font-weight:700;color:var(--text-primary)">এসএমএস তাগাদা (Native SMS)</div>
+                  <div class="command-result-desc">ইন্টারনেট ছাড়া সাধারণ মোবাইলের মেসেজ অপশনে প্রিপেয়ার্ড এসএমএস এক ক্লিকে চলে যাবে।</div>
+                </div>
+
+                <div class="voice-command-card">
+                  <div style="font-size:1.5rem">📜</div>
+                  <div style="font-weight:700;color:var(--text-primary)">লেনদেনের ইতিহাস (Timeline)</div>
+                  <div class="command-result-desc">কোন তারিখে কত টাকা নিল এবং কত টাকা জমা দিল—তার তারিখভিত্তিক রসিদ।</div>
+                </div>
+              </div>
+
+              <!-- Screenshot Slot 4 -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">📲</div>
+                <span class="slot-tag">স্ক্রিনশট স্লট ৪</span>
+                <div class="slot-title">কাস্টমার প্রোফাইল ও হোয়াটসঅ্যাপ/এসএমএস তাগাদা বাটন</div>
+                <div class="slot-caption">
+                  কাস্টমারের খাতা খোলার পর ব্যালেন্স হিস্ট্রি ও নিচে কল/মেসেজ/হোয়াটসঅ্যাপ বাটনের স্ক্রিনশট এখানে যুক্ত হবে।
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 5: Monthly Reports & Aging -->
+            <section id="sec-reports" class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">৫</span>
+                <h2 class="guide-section-title">মাস শেষের পূর্ণাঙ্গ রিপোর্ট ও মেয়াদোত্তীর্ণ বাকির এজিং বিশ্লেষণ</h2>
+              </div>
+              <p class="guide-section-intro">
+                মাস শেষে দোকানে মোট কত টাকা বিক্রি হলো, কত টাকা বাকি পড়লো আর কত ক্যাশ আদায় হলো—তা এক নজরে হিসাববটের রিপোর্ট সেকশনে পাওয়া যায়। এছাড়া বকেয়া টাকার মেয়াদ অনুযায়ী চারটি সতর্কতামূলক ক্যাটাগরিতে ভাগ করা থাকে:
+              </p>
+
+              <!-- Aging 4-bucket grid -->
+              <div class="aging-grid">
+                <div class="aging-card green">
+                  <div class="aging-range">০ – ৭ দিন</div>
+                  <div class="aging-status">🟢 সদ্য বাকি (Recent)</div>
+                </div>
+                <div class="aging-card amber">
+                  <div class="aging-range">৮ – ৩০ দিন</div>
+                  <div class="aging-status">🟡 চলতি বকেয়া (Moderate)</div>
+                </div>
+                <div class="aging-card orange">
+                  <div class="aging-range">৩১ – ৬০ দিন</div>
+                  <div class="aging-status">🟠 তাগাদার উপযোগী (Warning)</div>
+                </div>
+                <div class="aging-card red">
+                  <div class="aging-range">৬০+ দিন</div>
+                  <div class="aging-status">🔴 অতি পুরোনো বাকি (Critical)</div>
+                </div>
+              </div>
+
+              <div style="background:#f8fafc;border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:1.25rem;margin-top:1.5rem">
+                <h4 style="margin:0 0 0.5rem;color:var(--text-primary)">📊 রিপোর্ট সেকশনে যা দেখতে পাবেন:</h4>
+                <p style="margin:0;font-size:0.95rem;color:var(--text-secondary);line-height:1.6">
+                  • <strong>চলতি মাসের মোট হিসাব:</strong> মোট নগদ বিক্রি, নতুন দেওয়া বাকি এবং মোট আদায় হওয়া ক্যাশ।<br>
+                  • <strong>বকেয়া ঝুঁকি বিশ্লেষণ:</strong> ৬০ দিনের বেশি পুরাতন অনাদায়ী বাকির মোট তালিকা, যাতে মূলধন আটকে না যায়।<br>
+                  • <strong>ব্যক্তিগত খাতার ব্যালেন্স:</strong> মোট কার কাছে কত দেনা আছি এবং কার থেকে কত পাওনা আছে।
+                </p>
+              </div>
+
+              <!-- Screenshot Slot 5 -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">📊</div>
+                <span class="slot-tag">স্ক্রিনশট স্লট ৫</span>
+                <div class="slot-title">মাস শেষের রিপোর্ট ও বকেয়া এজিং স্ক্রিন</div>
+                <div class="slot-caption">
+                  ড্যাশবোর্ডের রিপোর্ট ট্যাব, মাসের আয়-ব্যয় সামারি ও রঙিন বকেয়া সতর্কবার্তা স্ক্রিনশট এখানে বসবে।
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 6: Security & PIN -->
+            <section id="sec-security" class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">৬</span>
+                <h2 class="guide-section-title">সিকিউরিটি ও পিন লক (Security & Privacy)</h2>
+              </div>
+              <p class="guide-section-intro">
+                আপনার দোকানের আর্থিক তথ্য বা ব্যক্তিগত দেনা-পাওনার হিসাব সম্পূর্ণ গোপন। অন্য কেউ যেন আপনার ফোনে ঢুকে হিসাব দেখতে না পারে, সেজন্য রয়েছে শক্তিশালী সুরক্ষা ব্যবস্থা:
+              </p>
+
+              <ul style="padding-left:1.25rem;line-height:1.8;color:var(--text-secondary)">
+                <li><strong>৪ ডিজিটের সিকিউরিটি পিন:</strong> সেটিংস থেকে আপনার নিজের পছন্দমতো পিন কোড সেট করতে পারবেন।</li>
+                <li><strong>ফিঙ্গারপ্রিন্ট ও বায়োমেট্রিক আনলক:</strong> ফোনে ফিঙ্গারপ্রিন্ট সেন্সর থাকলে এক স্পর্শেই নিমেষে অ্যাপ আনলক হবে।</li>
+                <li><strong>অন-ডিভাইস এনক্রিপ্টেড ডাটাবেজ:</strong> আপনার সমস্ত ডাটা আপনার ফোনেই সংরক্ষিত থাকে, ফলে সম্পূর্ণ নিরাপদ।</li>
+              </ul>
+            </section>
+
+            <!-- Screenshot How-To Guide Box -->
+            <section id="sec-screenshot-howto" class="how-to-screenshot-box">
+              <div class="how-to-screenshot-title">
+                <span>📸 অ্যান্ড্রয়েড ফোনে কীভাবে পরিষ্কার স্ক্রিনশট নিবেন?</span>
+              </div>
+              <p style="font-size:0.95rem;color:#1e3a8a;margin-bottom:1rem">
+                আমাদের নির্দেশিকা পেজে আপনার আসল স্ক্রিনশটগুলো যুক্ত করার জন্য নিচের যেকোনো একটি পদ্ধতিতে স্ক্রিনশট তুলে পাঠাতে পারেন:
+              </p>
+              <ol class="screenshot-step-list">
+                <li>
+                  <strong>পদ্ধতি ১ (বাটন চাপ দিয়ে - সবচেয়ে সহজ):</strong><br>
+                  হিসাববট অ্যাপটি ওপেন করে কাঙ্ক্ষিত স্ক্রিনে যান। এরপর আপনার ফোনের <strong>পাওয়ার বাটন (Power)</strong> এবং <strong>ভলিউম কমানোর বাটন (Volume Down)</strong> একসাথে ১ সেকেন্ড চেপে ধরে রাখুন। স্ক্রিন ফ্ল্যাশ করবে এবং স্ক্রিনশট সেভ হয়ে যাবে।
+                </li>
+                <li>
+                  <strong>পদ্ধতি ২ (নোটিফিকেশন প্যানেল দিয়ে):</strong><br>
+                  ফোনের স্ক্রিনের উপর থেকে নিচে সোয়াইপ করে কুইক সেটিংস প্যানেল নামান। সেখানে <strong>Screenshot</strong> বা <strong>Screen Capture</strong> আইকনে চাপ দিন।
+                </li>
+                <li>
+                  <strong>পদ্ধতি ৩ (কম্পিউটার/ডেভেলপার - ADB দিয়ে):</strong><br>
+                  ফোনটি ইউএসবি দিয়ে ম্যাকের সাথে যুক্ত থাকলে টার্মিনালে রান করুন:<br>
+                  <code>adb exec-out screencap -p &gt; screenshot_mode.png</code>
+                </li>
+              </ol>
+              <div style="margin-top:1rem;font-size:0.875rem;color:#1e40af">
+                💡 <em>স্ক্রিনশটগুলো তোলা শেষ হলে ফাইলগুলো চ্যাটে আপলোড করে দিন, আমরা তাৎক্ষণিকভাবে উপরের স্লটগুলোতে সেগুলো সুন্দর ফ্রেমসহ সাজিয়ে দেবো!</em>
+              </div>
+            </section>
+
+          </div>
+
+
+          <!-- ==================================================================
+               ENGLISH VERSION CONTENT
+               ================================================================== -->
+          <div id="contentEn" class="guide-lang-section">
+
+            <!-- Section 1: Dual Mode (EN) -->
+            <section class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">1</span>
+                <h2 class="guide-section-title">Personal & Business Dual Mode Setup</h2>
+              </div>
+              <p class="guide-section-intro">
+                HisabBot is engineered not just for shopkeepers, but also for individuals who need to manage loans and debts with friends, relatives, and colleagues. Right upon first launch, you select your primary workspace mode:
+              </p>
+
+              <div class="voice-commands-grid">
+                <div class="voice-command-card" style="border-top:3px solid #0284c7">
+                  <span class="command-mode-tag tag-business">🏪 Store / Business Mode</span>
+                  <div style="font-weight:700;color:var(--text-primary);margin-top:0.25rem">Shop Ledger Features:</div>
+                  <div class="command-result-desc">
+                    • Customer credit / dues (বাকি - Credit)<br>
+                    • Customer payments settlement (জমা - Payment)<br>
+                    • Daily cash sales recording (নগদ - Cash)<br>
+                    • Individual customer ledger timelines
+                  </div>
+                </div>
+
+                <div class="voice-command-card" style="border-top:3px solid #d97706">
+                  <span class="command-mode-tag tag-personal">👤 Personal Finances Mode</span>
+                  <div style="font-weight:700;color:var(--text-primary);margin-top:0.25rem">Personal Debt & Loan Ledger:</div>
+                  <div class="command-result-desc">
+                    • <strong>Receivables (পাওনা):</strong> Money lent to friends, peers, or relatives<br>
+                    • <strong>Payables / Debts (দেনা):</strong> Money borrowed from others<br>
+                    • Repayment settlements and balance updates
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screenshot Slot 1 EN -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">📱</div>
+                <span class="slot-tag">Screenshot Slot 1</span>
+                <div class="slot-title">Mode Selection Screen (Business vs Personal)</div>
+                <div class="slot-caption">
+                  Placeholder for setup screen screenshot showing mode selection between Shop and Personal Khata.
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 2: Spoken Voice Entry (EN) -->
+            <section class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">2</span>
+                <h2 class="guide-section-title">Speaking Transactions (Voice Command Directory)</h2>
+              </div>
+              <p class="guide-section-intro">
+                Zero typing required. Simply tap the large microphone button on the home screen and speak naturally in Bangla. The Gemini-powered AI automatically isolates the person's name, monetary amount, and transaction type.
+              </p>
+
+              <h4 style="margin:1.5rem 0 0.75rem;color:var(--color-primary-dark)">🏪 Shop Mode Voice Commands:</h4>
+              <div class="voice-commands-grid">
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-business">Credit (বাকি)</span>
+                  <div class="spoken-quote">🎙️ “রহিম আজকে ৫০০ টাকা বাকি নিছে”</div>
+                  <div class="command-result-desc">✓ Customer: Rahim | Amount: ৳ 500 | Type: Credit</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-business">Payment (জমা)</span>
+                  <div class="spoken-quote">🎙️ “করিম ভাই ১০০০ টাকা জমা দিল”</div>
+                  <div class="command-result-desc">✓ Customer: Karim | Amount: ৳ 1,000 | Type: Payment</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-business">Cash Sale (নগদ)</span>
+                  <div class="spoken-quote">🎙️ “আকাশ নগদ বিক্রি ২৫০ টাকা”</div>
+                  <div class="command-result-desc">✓ Customer: Akash | Amount: ৳ 250 | Type: Cash Sale</div>
+                </div>
+              </div>
+
+              <h4 style="margin:2rem 0 0.75rem;color:#b45309">👤 Personal Debt & Loan Voice Commands:</h4>
+              <div class="voice-commands-grid">
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-personal">Receivable (ধার দেওয়া / পাওনা)</span>
+                  <div class="spoken-quote">🎙️ “সাকিবকে ৫০০০ টাকা ধার দিলাম”</div>
+                  <div class="command-result-desc">✓ Person: Sakib | Amount: ৳ 5,000 | Type: Receivable (পাওনা)</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-personal">Payable (ধার নেওয়া / দেনা)</span>
+                  <div class="spoken-quote">🎙️ “মামার থেকে ২০০০ টাকা ধার নিলাম”</div>
+                  <div class="command-result-desc">✓ Person: Uncle | Amount: ৳ 2,000 | Type: Debt / Payable (দেনা)</div>
+                </div>
+                <div class="voice-command-card">
+                  <span class="command-mode-tag tag-personal">Debt Settlement</span>
+                  <div class="spoken-quote">🎙️ “সাকিব ১০০০ টাকা ফেরত দিল”</div>
+                  <div class="command-result-desc">✓ Person: Sakib | Amount: ৳ 1,000 | Type: Debt Repayment</div>
+                </div>
+              </div>
+
+              <!-- Screenshot Slot 2 EN -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">🎙️</div>
+                <span class="slot-tag">Screenshot Slot 2</span>
+                <div class="slot-title">Voice Recognition & Live Audio Waveform Screen</div>
+                <div class="slot-caption">
+                  Placeholder for active listening state screenshot with live audio visualization and transcribed text.
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 3: Verification Guardrail (EN) -->
+            <section class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">3</span>
+                <h2 class="guide-section-title">The Verification Guardrail (Review Before Saving)</h2>
+              </div>
+              <p class="guide-section-intro">
+                HisabBot's core reliability promise: <strong>Nothing is ever written to the database without your visual and explicit confirmation</strong>. After speaking, a structured review card displays the parsed fields and reads it aloud via Text-to-Speech.
+              </p>
+
+              <div style="background:#f8fafc;border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.5rem">
+                <h4 style="margin:0 0 0.5rem;color:var(--text-primary)">Structured Fields on Review Card:</h4>
+                <ul style="padding-left:1.25rem;line-height:1.8;color:var(--text-secondary)">
+                  <li><strong>Party Name:</strong> Customer name or debtor contact.</li>
+                  <li><strong>Type Badge:</strong> Color-coded badge for Credit, Payment, Cash, Receivable, or Payable.</li>
+                  <li><strong>Amount:</strong> Prominently displayed monetary figure in Taka.</li>
+                  <li><strong>Note:</strong> Optional item or reason.</li>
+                  <li><strong>Spoken Readback:</strong> Reads confirmation prompt in natural Bangla.</li>
+                </ul>
+              </div>
+
+              <!-- Screenshot Slot 3 EN -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">🛡️</div>
+                <span class="slot-tag">Screenshot Slot 3</span>
+                <div class="slot-title">Verification Guardrail Dialog (Confirm / Cancel)</div>
+                <div class="slot-caption">
+                  Placeholder for confirmation modal screenshot with Confirm and Cancel buttons.
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 4: Reminders (EN) -->
+            <section class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">4</span>
+                <h2 class="guide-section-title">1-Tap Collection Reminders (Call, WhatsApp & SMS)</h2>
+              </div>
+              <p class="guide-section-intro">
+                Eliminate awkward collection reminders. Inside every customer's account profile, HisabBot provides quick action buttons to initiate direct phone calls or send preformatted reminder messages over WhatsApp and SMS.
+              </p>
+
+              <!-- Screenshot Slot 4 EN -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">📲</div>
+                <span class="slot-tag">Screenshot Slot 4</span>
+                <div class="slot-title">Customer Ledger with 1-Tap Collection Buttons</div>
+                <div class="slot-caption">
+                  Placeholder for customer detail view showing balance timeline, call, SMS, and WhatsApp reminder buttons.
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 5: Monthly Reports & Aging (EN) -->
+            <section class="guide-section">
+              <div class="guide-section-header">
+                <span class="guide-section-num">5</span>
+                <h2 class="guide-section-title">Monthly Reports & Debt Aging Analytics</h2>
+              </div>
+              <p class="guide-section-intro">
+                Track monthly performance, total outstanding balances, and debt age brackets to protect working capital:
+              </p>
+
+              <div class="aging-grid">
+                <div class="aging-card green">
+                  <div class="aging-range">0 – 7 Days</div>
+                  <div class="aging-status">🟢 Recent Credit</div>
+                </div>
+                <div class="aging-card amber">
+                  <div class="aging-range">8 – 30 Days</div>
+                  <div class="aging-status">🟡 Moderate Age</div>
+                </div>
+                <div class="aging-card orange">
+                  <div class="aging-range">31 – 60 Days</div>
+                  <div class="aging-status">🟠 Due for Follow-up</div>
+                </div>
+                <div class="aging-card red">
+                  <div class="aging-range">60+ Days</div>
+                  <div class="aging-status">🔴 Critical Overdue</div>
+                </div>
+              </div>
+
+              <!-- Screenshot Slot 5 EN -->
+              <div class="screenshot-placeholder-slot">
+                <div class="slot-icon-circle">📊</div>
+                <span class="slot-tag">Screenshot Slot 5</span>
+                <div class="slot-title">Monthly Audit & Aging Analytics Dashboard</div>
+                <div class="slot-caption">
+                  Placeholder for reports screen showing collection metrics, cash summaries, and overdue aging breakdown.
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+            <img src="/ic_hisabbot_logo.png" style="width:36px;height:36px;border-radius:8px" alt="Logo">
+            <h4 style="margin:0">হিসাববট</h4>
+          </div>
+          <p>
+            কথা বলেই লিখুন দোকান ও ব্যক্তিগত দেনা-পাওনার হিসাব। ছোট ব্যবসায়ী ও সাধারণ ব্যবহারকারীদের বিশ্বস্ত ডিজিটাল খাতা।
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>প্রয়োজনীয় লিংক</h5>
+          <ul class="footer-links-list">
+            <li><a href="/">মূল পাতা</a></li>
+            <li><a href="/#demo">লাইভ ডেমো</a></li>
+            <li><a href="/#features">ফিচারসমূহ</a></li>
+            <li><a href="/guide.html" style="color:var(--color-primary-light);font-weight:700">ব্যবহার নির্দেশিকা</a></li>
+            <li><a href="/#download">APK ডাউনলোড</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>আইনি ও পলিসি</h5>
+          <ul class="footer-links-list">
+            <li><a href="/privacy.html">গোপনীয়তা নীতি (Privacy)</a></li>
+            <li><a href="/terms.html">শর্তাবলী (Terms)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>সহায়তা</h5>
+          <ul class="footer-links-list">
+            <li><a href="mailto:support@kothabot.ai">support@kothabot.ai</a></li>
+            <li><a href="https://wa.me/8801581771780" target="_blank" rel="noopener">WhatsApp: +8801581771780</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© ২০২৬ হিসাববট (HisabBot) • সর্বস্বত্ব সংরক্ষিত।</div>
+        <div>সহায়িকা সংস্করণ: v1.2.0 • KothaBot AI</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tab and Language Logic -->
+  <script>
+    let currentGuideLang = localStorage.getItem('hisabbot_lang') || 'bn';
+
+    function setGuideLanguage(lang) {
+      currentGuideLang = lang;
+      localStorage.setItem('hisabbot_lang', lang);
+      document.body.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+
+      const isBn = lang === 'bn';
+      document.getElementById('contentBn').classList.toggle('active', isBn);
+      document.getElementById('contentEn').classList.toggle('active', !isBn);
+      document.getElementById('tabBn').classList.toggle('active', isBn);
+      document.getElementById('tabEn').classList.toggle('active', !isBn);
+
+      document.getElementById('guideLangLabel').textContent = isBn ? 'English' : 'বাংলা';
+      
+      if (isBn) {
+        document.getElementById('pageMainHeading').textContent = 'হিসাববট ব্যবহারের পূর্ণাঙ্গ নির্দেশিকা';
+        document.getElementById('pageSubHeading').textContent = 'দোকানের বাকি-জমা কিংবা ব্যক্তিগত দেনা-পাওনা—মুখের সাধারণ বাংলায় বলুন আর মুহূর্তেই নিখুঁত হিসাব রাখুন। সেভ করার আগে যাচাই, মাস শেষের রিপোর্ট এবং হোয়াটসঅ্যাপ তাগাদার ধাপে ধাপে ব্যবহার শিখুন।';
+        document.getElementById('tocHeading').textContent = 'সূচিপত্র (TOC)';
+      } else {
+        document.getElementById('pageMainHeading').textContent = 'HisabBot User Manual & Guide';
+        document.getElementById('pageSubHeading').textContent = 'A complete guide to managing shopkeeper credit and personal loans by speaking natural Bangla. Learn how to verify transactions, view monthly reports, and send WhatsApp reminders.';
+        document.getElementById('tocHeading').textContent = 'Table of Contents';
+      }
+    }
+
+    function switchGuideTab(lang) {
+      setGuideLanguage(lang);
+    }
+
+    function toggleGuideLang() {
+      setGuideLanguage(currentGuideLang === 'bn' ? 'en' : 'bn');
+    }
+
+    // Initialize from storage
+    setGuideLanguage(currentGuideLang);
+  </script>
+</body>
+</html>

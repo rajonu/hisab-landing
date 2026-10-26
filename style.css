@@ -1974,3 +1974,388 @@ button {
     font-size: 2.35rem;
   }
 }
+
+/* ==========================================================================
+   Documentation & User Guide Styles
+   ========================================================================== */
+.guide-header-hero {
+  background: linear-gradient(135deg, rgba(27, 94, 32, 0.06) 0%, rgba(5, 150, 105, 0.03) 100%);
+  border-bottom: 1px solid var(--border-light);
+  padding: 3.5rem 0 2.5rem;
+}
+
+.guide-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1rem;
+}
+
+.guide-hero-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.guide-hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.guide-tabs-bar {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--border-light);
+  margin-top: 1.5rem;
+}
+
+.guide-tab-btn {
+  padding: 0.65rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all var(--transition-base);
+  margin-bottom: -2px;
+}
+
+.guide-tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.guide-tab-btn.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  background: rgba(27, 94, 32, 0.04);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.guide-main-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: 3rem 0 6rem;
+}
+
+@media (min-width: 992px) {
+  .guide-main-layout {
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.guide-sidebar {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .guide-sidebar {
+    display: block;
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.guide-toc-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.guide-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.guide-toc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.guide-toc-link:hover {
+  color: var(--color-primary);
+  background: #f1f5f9;
+}
+
+.guide-article {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.guide-section {
+  scroll-margin-top: 100px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.guide-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.guide-section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.guide-section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.guide-section-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+/* Screenshot Placeholder Slot Card */
+.screenshot-placeholder-slot {
+  margin: 2rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.screenshot-placeholder-slot:hover {
+  border-color: var(--color-primary);
+  background: linear-gradient(180deg, #f0fdf4 0%, #f8fafc 100%);
+}
+
+.slot-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.slot-tag {
+  display: inline-block;
+  background: var(--color-primary-light);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.slot-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.slot-caption {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+/* Voice Command Tables & Dialogue Cards */
+.voice-commands-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 640px) {
+  .voice-commands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.voice-command-card {
+  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.command-mode-tag {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.tag-business {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.tag-personal {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.spoken-quote {
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.command-result-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Aging Breakdown Grid */
+.aging-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .aging-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.aging-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  text-align: center;
+}
+
+.aging-card.green {
+  border-top: 4px solid #16a34a;
+}
+.aging-card.amber {
+  border-top: 4px solid #f59e0b;
+}
+.aging-card.orange {
+  border-top: 4px solid #ea580c;
+}
+.aging-card.red {
+  border-top: 4px solid #dc2626;
+}
+
+.aging-range {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.aging-status {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Screenshot Helper Guide Card */
+.how-to-screenshot-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  margin-top: 2rem;
+}
+
+.how-to-screenshot-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e40af;
+  margin-bottom: 0.75rem;
+}
+
+.screenshot-step-list {
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #1e3a8a;
+}
+
+.guide-lang-section {
+  display: none;
+}
+
+.guide-lang-section.active {
+  display: block;
+}

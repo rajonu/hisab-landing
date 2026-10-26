@@ -1,8 +1,8 @@
 export const TRANSLATIONS = {
   bn: {
     meta: {
-      title: "হিসাববট (HisabBot) | কথা বলেই লিখুন বাকি-জমার হিসাব",
-      description: "বাংলাদেশের দোকানদার ভাইদের জন্য আধুনিক ডিজিটাল খাতা। মুখে বাংলায় লেনদেন বলুন, স্ক্রিনে মিলিয়ে নিন এবং এক ক্লিকে সেভ করুন। অফলাইনেও সম্পূর্ণ সচল।",
+      title: "হিসাববট (HisabBot) | কথা বলেই রাখুন দোকান ও ব্যক্তিগত দেনা-পাওনার হিসাব",
+      description: "দোকানের বাকি-জমা কিংবা ব্যক্তিগত দেনা-পাওনা—মুখের সাধারণ বাংলায় বলুন আর মুহূর্তেই হিসাব রাখুন। মাস শেষের পূর্ণাঙ্গ রিপোর্ট ও হোয়াটসঅ্যাপ-এসএমএস তাগাদাসহ অফলাইনেও সম্পূর্ণ সচল।",
     },
     nav: {
       brand: "হিসাববট",
@@ -11,26 +11,27 @@ export const TRANSLATIONS = {
       howItWorks: "কীভাবে কাজ করে",
       demo: "লাইভ ডেমো",
       features: "সুবিধাসমূহ",
+      guide: "ব্যবহার নির্দেশিকা",
       faq: "সাধারণ জিজ্ঞাসা",
       downloadBtn: "অ্যাপ ডাউনলোড",
       langSwitch: "English",
     },
     hero: {
-      badge: "অ্যান্ড্রয়েড প্রোটোটাইপ সংস্করণ",
-      headline: "কথা বলেই লিখুন বাকি-জমার হিসাব।",
-      subheadline: "দোকানের কাগজ-কলমের খাতা বদলে ফেলুন সহজে। মুখে বাংলায় লেনদেন বলুন, স্ক্রিনে দেখে মিলিয়ে নিন, তারপর ১ ক্লিকে সেভ করুন।",
+      badge: "দোকান ও ব্যক্তিগত হিসাব • Android v1.2.0",
+      headline: "কথা বলেই লিখুন দোকান ও ব্যক্তিগত দেনা-পাওনার হিসাব।",
+      subheadline: "দোকানের কাগজ-কলমের খাতা কিংবা বন্ধুদের সাথে ধার-দেনা—সব রাখুন আঙুলের ডগায়। মুখে বাংলায় লেনদেন বলুন, স্ক্রিনে দেখে মিলিয়ে নিন, তারপর ১ ক্লিকে সেভ করুন।",
       ctaDownload: "APK ডাউনলোড করে টেস্ট করুন",
       ctaQr: "QR স্ক্যান করুন",
       sizeBadge: "ভার্সন v1.2.0 • ২৬ মেগাবাইট",
       trustBullets: [
-        "ভুল এড়াতে সেভ করার আগে স্ক্রিনে যাচাইয়ের নিশ্চয়তা",
-        "ইন্টারনেট না থাকলেও সাধারণ ম্যানুয়াল খাতা শতভাগ সচল",
-        "সম্পূর্ণ বিজ্ঞাপনমুক্ত ও আপনার ডিভাইসেই হিসাব সুরক্ষিত"
+        "🏪 দোকান মোড: বাকি, জমা ও নগদ বিক্রির ক্যাশ খাতা",
+        "👤 ব্যক্তিগত মোড: কার কাছে কত দেনা ও কার থেকে কত পাওনা",
+        "📊 মাস শেষে পূর্ণাঙ্গ রিপোর্ট ও মেয়াদোত্তীর্ণ বাকির স্মার্ট অ্যালার্ট"
       ],
       previewTitle: "হিসাববট লাইভ প্রিভিউ",
       listening: "শুনছি...",
       parsedCardTitle: "লেনদেন যাচাই করুন",
-      customerLabel: "গ্রাহকের নাম:",
+      customerLabel: "নাম / কাস্টমার:",
       customerVal: "রহিম ভাই",
       typeLabel: "লেনদেনের ধরন:",
       typeValCredit: "বাকি (Credit)",
@@ -41,71 +42,73 @@ export const TRANSLATIONS = {
       spokenPrompt: "“রহিম ভাইয়ের খাতায় ৫০০ টাকা বাকি উঠাবো?”",
       btnCancel: "✕ বাতিল",
       btnConfirm: "✓ ঠিক আছে",
-      statusConfirmed: "✓ রহিমের খাতায় ৫০০ টাকা বাকি সফলভাবে উঠানো হলো।",
+      statusConfirmed: "✓ লেনদেন সফলভাবে ডিজিটাল খাতায় সেভ করা হলো।",
     },
     betaNotice: {
       tag: "সতর্কবার্তা ও বিজ্ঞপ্তি",
       title: "প্রোটোটাইপ / পরীক্ষামূলক সংস্করণ",
-      desc: "হিসাববট বর্তমানে পরীক্ষামূলক প্রোটোটাইপ হিসেবে টেস্ট করা হচ্ছে। ভয়েস এন্ট্রির পর সর্বদা স্ক্রিনের তথ্য মিলিয়ে নিন এবং আপনার গুরুত্বপূর্ণ হিসাবের একটি ব্যাকআপ রাখুন। বর্তমান সংস্করণে ভয়েস প্রসেসিংয়ের জন্য ইন্টারনেটের প্রয়োজন হলেও অফলাইনে ম্যানুয়াল এন্ট্রি সম্পূর্ণ সচল থাকে।"
+      desc: "হিসাববট বর্তমানে সক্রিয়ভাবে টেস্ট করা হচ্ছে। এন্ট্রি করার সময় স্ক্রিনের তথ্য ভালো করে মিলিয়ে নিন এবং যেকোনো জরুরি হিসাবের বিকল্প ব্যাকআপ রাখুন। বর্তমান সংস্করণে ভয়েস প্রসেসিংয়ের জন্য ইন্টারনেটের প্রয়োজন হলেও সাধারণ অফলাইন ম্যানুয়াল খাতা শতভাগ সচল থাকে।"
     },
     benefits: {
       sectionTag: "কেন হিসাববট?",
-      title: "কাগজের খাতার ঝামেলা দূর করুন ৩ গুণ দ্রুত",
-      subtitle: "দোকানের ব্যস্ত সময়ে খাতা খুঁজে পাতা উল্টানোর দিন শেষ। এখন হিসাব রাখা হবে মুখে কথা বলার মতোই সহজ।",
+      title: "দোকান ও ব্যক্তিগত হিসাব—সব এক অ্যাপে ৩ গুণ দ্রুত",
+      subtitle: "কাগজের খাতা খুঁজে পাতা ওল্টানো কিংবা কাকে কত ধার দিলেন তা ভুলে যাওয়ার দিন শেষ। মুখের কথাই এখন হবে আপনার সেরা হিসাবরক্ষক।",
       items: [
         {
+          icon: "👥",
+          title: "ব্যক্তিগত ও ব্যবসায়িক ডুয়েল মোড",
+          desc: "দোকানের জন্য 'বাকি-জমা-নগদ' এবং ব্যক্তিগত খরচের জন্য 'দেনা-পাওনা'—অ্যাপের শুরুতেই আপনার প্রয়োজন অনুযায়ী খাতার মোড বেছে নেওয়ার সুবিধা।"
+        },
+        {
           icon: "⚡",
-          title: "৩ গুণ দ্রুত হিসাব এন্ট্রি",
-          desc: "ব্যস্ত দোকানে লেখার সময় নেই? মাত্র ৫ সেকেন্ডে বাংলায় বলুন—'রহিম ৫০০ টাকা বাকি নিল'। সাথে সাথে হিসাব তৈরি।"
+          title: "কথা বলে ৫ সেকেন্ডে এন্ট্রি",
+          desc: "ব্যস্ত সময় মুখে বাংলায় বলুন—'রহিম ৫০০ টাকা বাকি নিল' বা 'সাকিবকে ২০০০ টাকা ধার দিলাম'। নিমিষেই লেনদেন স্ক্রিনে তৈরি।"
         },
         {
-          icon: "🛡️",
-          title: "ভুল হওয়ার কোনো সুযোগ নেই",
-          desc: "AI নিজে থেকে সরাসরি সেভ করে না। আগে স্ক্রিনে স্পষ্ট দেখায় এবং মুখে পড়ে শোনায়। আপনি 'ঠিক আছে' চাপলেই কেবল সেভ হয়।"
+          icon: "⚠️",
+          title: "ড্যাশবোর্ড অ্যালার্ট ও তাগাদা",
+          desc: "কোন বকেয়া কত দিন ধরে বাকি আছে ড্যাশবোর্ডে রঙবেরঙের অ্যালার্ট দেখে ১ ক্লিকেই সরাসরি কল, হোয়াটসঅ্যাপ বা এসএমএস তাগাদা পাঠান।"
         },
         {
-          icon: "📴",
-          title: "ইন্টারনেট ছাড়াও ১০০% সচল",
-          desc: "দোকানে নেটওয়ার্ক নেই? কোনো সমস্যা নেই! ম্যানুয়াল খাতা হিসেবে অ্যাপটি সম্পূর্ণ অফলাইনে কাজ করে। ব্যবসা কখনও থামবে না।"
-        },
-        {
-          icon: "📲",
-          title: "১-ক্লিকে বকেয়া তাগাদা",
-          desc: "বাকি আদায়ের জন্য খাতায় নম্বর খোঁজার দরকার নেই। ১ ক্লিকেই সরাসরি ফোন কল করুন বা তৈরি করা হোয়াটসঅ্যাপ রিমাইন্ডার পাঠিয়ে দিন।"
+          icon: "📊",
+          title: "মাস শেষের অডিট ও এজিং রিপোর্ট",
+          desc: "মাস শেষে মোট কত টাকা আদায় হলো, মোট বকেয়া কত এবং ০-৭ দিন, ৮-৩০ দিন বা ৩০+ দিনের পুরাতন বাকি কত—এক ক্লিকে পুরো হিসাব বিবরণী দেখুন।"
         }
       ]
     },
     howItWorks: {
       sectionTag: "সহজ পদ্ধতি",
-      title: "৩টি সহজ ধাপে বাকি-জমা রেকর্ড করুন",
-      subtitle: "কোনো জটিল মেন্যু নেই। যেকোনো দোকানদার ভাই প্রথম দিন থেকেই সহজে ব্যবহার করতে পারবেন।",
+      title: "৩টি সহজ ধাপে বাকি-জমা ও দেনা-পাওনা রেকর্ড করুন",
+      subtitle: "কোনো জটিল মেন্যু নেই। দোকানের কর্মচারী থেকে শুরু করে যে কেউ প্রথম দিন থেকেই সহজে ব্যবহার করতে পারবেন।",
       steps: [
         {
           step: "০১",
           title: "মুখে বাংলায় বলুন",
-          desc: "মাইক বাটনে চাপ দিয়ে সাধারণ বাংলা ভাষায় বলুন—'করিম ভাই ৩০০ টাকা জমা দিল' বা 'রহিম ভাই ৫০০ টাকা বাকি নিল'।"
+          desc: "মাইক বাটনে চাপ দিয়ে সাধারণ কথ্য বাংলায় বলুন—'করিম ভাই ৩০০ টাকা জমা দিল' বা 'মামার থেকে ২০০০ টাকা ধার নিলাম'।"
         },
         {
           step: "০২",
           title: "স্ক্রিনে মিলিয়ে নিন",
-          desc: "হিসাববট স্বয়ংক্রিয়ভাবে গ্রাহকের নাম, টাকার পরিমাণ এবং বাকি নাকি জমা—আলাদা করে সাজিয়ে দেখাবে এবং মুখে পড়ে শোনাবে।"
+          desc: "হিসাববট নিজে থেকে ব্যক্তির নাম, টাকার পরিমাণ এবং দেনা নাকি পাওনা—আলাদা করে সাজিয়ে দেখাবে এবং মুখে পড়ে শোনাবে।"
         },
         {
           step: "০৩",
           title: "নিশ্চিত করে সেভ করুন",
-          desc: "স্ক্রিনের তথ্য সঠিক হলে 'ঠিক আছে' চাপুন। সাথে সাথে আপনার দোকানের লোকাল ডিজিটাল খাতায় এটি নিরাপদভাবে জমা হয়ে যাবে।"
+          desc: "সব তথ্য ঠিক থাকলে 'ঠিক আছে' বাটনে চাপ দিন। আপনার অনুমতি ছাড়া ডাটাবেজে কোনো এন্ট্রি সেভ হয় না—ভুলের কোনো সুযোগ নেই।"
         }
       ]
     },
     demo: {
       sectionTag: "লাইভ সিমুলেটর",
-      title: "নিজেই টেস্ট করে দেখুন কীভাবে কাজ করে",
-      subtitle: "নিচের যেকোনো একটি বাক্যে ক্লিক করুন এবং দেখুন হিসাববট কীভাবে তাৎক্ষণিক লেনদেন আলাদা করে যাচাই করতে দেয়।",
+      title: "দোকান ও ব্যক্তিগত দুই ধরণের হিসাবই টেস্ট করে দেখুন",
+      subtitle: "নিচের যেকোনো একটি বাক্যে ক্লিক করুন এবং দেখুন হিসাববট কীভাবে তাৎক্ষণিক লেনদেন বুঝে ভেরিফিকেশন কার্ড তৈরি করে।",
       presetsLabel: "একটি নমুনা বাক্যে চাপ দিন:",
       presets: [
-        { text: "রহিম ৫০০ টাকা বাকি নিল", customer: "রহিম ভাই", type: "credit", amount: "৳ ৫০০", note: "দোকানের নিত্যপ্রয়োজনীয় সদাই" },
-        { text: "করিম ভাই ১০০০ টাকা জমা দিল", customer: "করিম ভাই", type: "payment", amount: "৳ ১,০০০", note: "পূর্বের বাকি পরিশোধ" },
-        { text: "আকাশ নগদ বিক্রি ২৫০ টাকা", customer: "আকাশ", type: "cash", amount: "৳ ২৫০", note: "নগদ বিক্রয়" }
+        { text: "🏪 রহিম ৫০০ টাকা বাকি নিল (দোকান)", customer: "রহিম ভাই", type: "credit", amount: "৳ ৫০০", note: "দোকানের সদাই", mode: "business" },
+        { text: "🏪 করিম ভাই ১০০০ টাকা জমা দিল (দোকান)", customer: "করিম ভাই", type: "payment", amount: "৳ ১,০০০", note: "বাকি পরিশোধ", mode: "business" },
+        { text: "💵 আকাশ নগদ বিক্রি ২৫০ টাকা (ক্যাশ)", customer: "আকাশ", type: "cash", amount: "৳ ২৫০", note: "নগদ বিক্রয়", mode: "business" },
+        { text: "👤 সাকিবকে ৫০০০ টাকা ধার দিলাম (ব্যক্তিগত পাওনা)", customer: "সাকিব", type: "personal_paoana", amount: "৳ ৫,০০০", note: "জরুরি প্রয়োজনে ধার দেওয়া", mode: "personal" },
+        { text: "👤 মামার থেকে ২০০০ টাকা ধার নিলাম (ব্যক্তিগত দেনা)", customer: "মামা", type: "personal_dena", amount: "৳ ২,০০০", note: "ব্যক্তিগত ধার নেওয়া", mode: "personal" }
       ],
       speakingAnim: "ভয়েস ইন্টারপ্রেট করা হচ্ছে...",
       verifiedLabel: "নিশ্চিতকরণ গার্ডরেল",
@@ -114,38 +117,38 @@ export const TRANSLATIONS = {
     },
     features: {
       sectionTag: "ফিচারসমূহ",
-      title: "দোকানের বাস্তব প্রয়োজনের কথা ভেবে তৈরি",
-      subtitle: "অপ্রয়োজনীয় জটিল ফিচার ছাড়াই একদম প্রয়োজনীয় সুবিধাসমূহ।",
+      title: "দোকান ও বাস্তব জীবনের সকল প্রয়োজনের সমন্বয়",
+      subtitle: "জটিল হিসাব-নিকাশ ভুলে গিয়ে সহজে ব্যবসা ও ব্যক্তিগত দেনা-পাওনা পরিচালনা করুন।",
       list: [
         {
+          icon: "🏪/👤",
+          title: "ব্যক্তিগত ও ব্যবসায়িক ডুয়েল মোড",
+          desc: "এক অ্যাপেই দুটি সম্পূর্ণ আলাদা খাতা। দোকানের জন্য বাকি-জমা-নগদ এবং নিজের জন্য কার কাছে কত দেনা বা পাওনা।"
+        },
+        {
           icon: "🎙️",
-          title: "বাংলা ভয়েস ইনপুট",
-          desc: "উন্নত AI এর সাহায্যে আঞ্চলিক টান বা সাধারণ দোকানের বাংলা উচ্চারণ স্বাচ্ছন্দ্যে বুঝতে পারে।"
+          title: "বাংলা ভয়েস ইন্টেলিজেন্স",
+          desc: "উন্নত AI আঞ্চলিক উচ্চারণ ও কথ্য বাংলা অনায়াসে বুঝতে পারে। টাইপ না করে কথা বলেই লেনদেন রেকর্ড করুন।"
         },
         {
-          icon: "✅",
-          title: "কনফার্মেশন গার্ডরেল",
-          desc: "আর্থিক লেনদেনে ভুলের ঝুঁকি শূন্য করতে প্রতিটি এন্ট্রির আগে স্পষ্ট মৌখিক ও ভিজ্যুয়াল অনুমতি নেওয়া হয়।"
+          icon: "⚠️",
+          title: "স্মার্ট ড্যাশবোর্ড অ্যালার্ট ও এজিং",
+          desc: "পুরোনো বকেয়ার জন্য সতর্ক সংকেত। ০-৭ দিন, ৮-৩০ দিন, ৩১-৬০ দিন ও ৬০+ দিনের বকেয়া সময়কাল স্পষ্টভাবে ভাগ করে দেখায়।"
         },
         {
-          icon: "📖",
-          title: "অফলাইন-ফার্স্ট লেজার",
-          desc: "আপনার সমস্ত হিসাব আপনার ফোনের ভেতরেই সুরক্ষিত থাকে। ইন্টারনেট চলে গেলেও খাতা সবসময় খোলা।"
+          icon: "📲",
+          title: "১-ক্লিকে এসএমএস ও হোয়াটসঅ্যাপ তাগাদা",
+          desc: "বকেয়া আদায়ের জন্য নম্বর না খুঁজে এক ক্লিকেই প্রি-ফরম্যাট করা হোয়াটসঅ্যাপ মেসেজ বা সাধারণ এসএমএস পাঠিয়ে দিন।"
         },
         {
-          icon: "👥",
-          title: "কাস্টমার খাতা ও ব্যালেন্স",
-          desc: "কার কাছে মোট কত বকেয়া আছে তা এক নজরে দেখুন। গ্রাহকভেদে পুরো লেনদেনের ইতিহাস টাইমলাইনে দৃশ্যমান।"
-        },
-        {
-          icon: "📞",
-          title: "তাগাদা ও যোগাযোগ",
-          desc: "বকেয়া আদায়ের জন্য কাস্টমারকে সরাসরি কল দিন অথবা অটোমেটিক ফরম্যাট করা হোয়াটসঅ্যাপ বার্তা পাঠিয়ে দিন।"
+          icon: "📊",
+          title: "মাস শেষের অডিট ও সামারি রিপোর্ট",
+          desc: "মাসিক মোট আদায়, নতুন বাকি, মোট দেনা-পাওনা এবং কাস্টমারভিত্তিক ব্যালেন্সের স্বচ্ছ আর্থিক প্রতিবেদন।"
         },
         {
           icon: "🔐",
           title: "পিন ও বায়োমেট্রিক সিকিউরিটি",
-          desc: "৪-সংখ্যার গোপন পিন এবং ফিঙ্গারপ্রিন্ট লক দিয়ে আপনার দোকানের হিসাব রাখুন অনাকাঙ্ক্ষিত চোখ থেকে সুরক্ষিত।"
+          desc: "৪-সংখ্যার গোপন পিন এবং ফিঙ্গারপ্রিন্ট লক দিয়ে আপনার ব্যক্তিগত ও দোকানের আর্থিক তথ্য রাখুন সম্পূর্ণ সুরক্ষিত।"
         }
       ]
     },
@@ -159,7 +162,7 @@ export const TRANSLATIONS = {
       fileMeta: "ফাইল সাইজ: ২৬ মেগাবাইট • সংস্করণ: v1.2.0",
       installGuideLink: "কীভাবে ফোনে ইনস্টল করবেন? গাইড দেখুন",
       qrTitle: "মোবাইল দিয়ে QR কোড স্ক্যান করুন",
-      qrDesc: "ফোনের ক্যামেরা বা QR স্ক্যানার দিয়ে স্ক্যান করলেই সরাসরি ডাউনলোড অপশন চলে আসবে।",
+      qrDesc: "ফোনের ক্যামেরা বা QR স্ক্যানার দিয়ে স্ক্যান করলেই সরাসরি ডাউনলোড পেজ চালু হবে।",
       copyLinkBtn: "লিংক কপি করুন",
       copiedToast: "লিংক কপি হয়েছে!",
       playstoreTitle: "Google Play Store",
@@ -185,34 +188,35 @@ export const TRANSLATIONS = {
       subtitle: "হিসাববট সম্পর্কে আপনার মনে থাকা সাধারণ প্রশ্নগুলোর সহজ উত্তর।",
       items: [
         {
-          q: "১. হিসাববট প্রোটোটাইপ ব্যবহার করা কি সম্পূর্ণ ফ্রি?",
-          a: "হ্যাঁ, বর্তমান পরীক্ষামূলক ও বেটা টেস্টিং চলাকালীন হিসাববট অ্যাপটি ১০০% বিনামূল্যে টেস্ট ও ব্যবহার করা যাবে।"
+          q: "১. হিসাববট কি শুধু দোকানের জন্য নাকি ব্যক্তিগতভাবেও ব্যবহার করা যায়?",
+          a: "হিসাববট উভয় কাজেই ব্যবহার করা যায়! অ্যাপ খোলার সময়ই আপনি বেছে নিতে পারবেন এটি 'দোকান/ব্যবসার খাতা' হিসেবে ব্যবহার করবেন নাকি 'ব্যক্তিগত দেনা-পাওনার খাতা' হিসেবে। ব্যক্তিগত মোডে কার কাছ থেকে কত ধার নিলেন এবং কাকে কত ধার দিলেন তা সহজে ট্র্যাক করা যায়।"
         },
         {
           q: "২. কথা বলার ফিচার কি ইন্টারনেট ছাড়া কাজ করে?",
-          a: "বর্তমানে বাংলা কথা শুনে টেক্সটে রূপান্তর এবং বিশ্লেষণ করার জন্য ইন্টারনেটের প্রয়োজন হয়। তবে দোকানে যদি নেটওয়ার্ক না থাকে, তাহলেও আপনি টাইপ করে ম্যানুয়ালি বাকি-জমা সম্পূর্ণ অফলাইনে এন্ট্রি ও পরিচালনা করতে পারবেন।"
+          a: "বর্তমানে কথা শুনে টেক্সটে রূপান্তর এবং বিশ্লেষণ করার জন্য ইন্টারনেটের প্রয়োজন হয়। তবে দোকানে বা বাইরে যদি নেটওয়ার্ক না থাকে, তাহলেও আপনি সাধারণ টাইপ করে ম্যানুয়ালি বাকি-জমা ও দেনা-পাওনা সম্পূর্ণ অফলাইনে শতভাগ সচল রাখতে পারবেন।"
         },
         {
           q: "৩. কথা ভুল বুঝলে কি ভুল হিসাব সেভ হয়ে যাওয়ার ঝুঁকি আছে?",
-          a: "একদমই না! হিসাববটের অন্যতম প্রধান সুরক্ষা বৈশিষ্ট্য হলো এটি নিজে থেকে কোনো ডাটা সেভ করে না। AI যা শুনেছে তা স্ক্রিনে বড় অক্ষরে গ্রাহকের নাম, টাকার অঙ্ক ও বাকি/জমা আকারে দেখায় এবং মুখে প্রশ্ন করে। আপনি 'ঠিক আছে' বাটনে চাপলেই কেবল সেটি সেভ হয়, অন্যথায় এক ক্লিকেই বাতিল করে দেওয়া যায়।"
+          a: "একদমই না! হিসাববটের অন্যতম প্রধান সুরক্ষা বৈশিষ্ট্য হলো এটি নিজে থেকে কোনো ডাটা সেভ করে না। AI যা শুনেছে তা স্ক্রিনে বড় অক্ষরে ব্যক্তির নাম, টাকার অঙ্ক ও দেনা/পাওনা আকারে দেখায় এবং মুখে প্রশ্ন করে। আপনি 'ঠিক আছে' বাটনে চাপলেই কেবল সেটি সেভ হয়, অন্যথায় এক ক্লিকেই বাতিল করে দেওয়া যায়।"
         },
         {
-          q: "৪. আমার দোকানের হিসাবের তথ্য কি অন্য কেউ দেখতে পাবে?",
-          a: "না। আপনার হিসাবের তথ্য আপনার ফোনের অভ্যন্তরীণ এনক্রিপ্টেড ডাটাবেজেই সংরক্ষিত থাকে। আপনি পিন কোড এবং ফিঙ্গারপ্রিন্ট লক সক্রিয় করে রাখলে আপনি ছাড়া আর কেউ অ্যাপের ভেতরে প্রবেশ করতে পারবে না।"
+          q: "৪. মাস শেষে কি পুরো হিসাবের রিপোর্ট দেখা যায়?",
+          a: "হ্যাঁ! হিসাববটে রয়েছে শক্তিশালী রিপোর্ট সেকশন। সেখানে আপনি মাসিক মোট লেনদেন, মোট আদায়, বকেয়া এবং কোন বাকির বয়স কতদিন (Aging Analysis: ০-৭ দিন, ৮-৩০ দিন, ৩১-৬০ দিন, ৬০+ দিন) তা এক নজরে দেখতে পারবেন।"
         },
         {
-          q: "৫. আইফোন (iPhone / iOS) এ কি হিসাববট চলবে?",
-          a: "বর্তমান প্রোটোটাইপ সংস্করণটি শুধুমাত্র অ্যান্ড্রয়েড ডিভাইসের জন্য তৈরি করা হয়েছে। পরবর্তীতে আইওএস সংস্করণ উন্মুক্ত করা হবে।"
+          q: "৫. বাকি আদায়ের জন্য কি কাস্টমারকে মেসেজ পাঠানো যায়?",
+          a: "হ্যাঁ! কাস্টমার প্রোফাইলে সরাসরি ১-ক্লিকে ফোন কল করার পাশাপাশি অটোমেটিক ফরম্যাট করা হোয়াটসঅ্যাপ মেসেজ ও সাধারণ এসএমএস ড্রাফট করার সুবিধা রয়েছে।"
         }
       ]
     },
     footer: {
-      tagline: "কথা বলেই লিখুন বাকি-জমার হিসাব। ছোট ব্যবসায়ী ও দোকানদার ভাইদের বিশ্বস্ত ডিজিটাল খাতা।",
-      brandDesc: "HisabBot by KothaBot — বাংলাদেশের দোকানদার ভাইদের কাজ সহজ করার জন্য স্থানীয়ভাবে নির্মিত।",
+      tagline: "কথা বলেই লিখুন দোকান ও ব্যক্তিগত দেনা-পাওনার হিসাব। ক্ষুদ্র ব্যবসায়ী ও সাধারণ মানুষের বিশ্বস্ত ডিজিটাল খাতা।",
+      brandDesc: "HisabBot by KothaBot — বাংলাদেশের মানুষ ও ব্যবসায়ীদের বাস্তব জীবনের সুবিধার জন্য নির্মিত।",
       quickLinksTitle: "প্রয়োজনীয় লিংক",
       navWhy: "সুবিধাসমূহ",
       navHow: "কাজের পদ্ধতি",
       navDemo: "লাইভ প্রিভিউ",
+      navGuide: "ব্যবহার নির্দেশিকা / টিউটোরিয়াল",
       navDownload: "APK ডাউনলোড",
       legalTitle: "আইনি ও গোপনীয়তা",
       privacyLink: "গোপনীয়তা নীতি (Privacy Policy)",
@@ -227,7 +231,7 @@ export const TRANSLATIONS = {
       privacyTitle: "গোপনীয়তা নীতি (Privacy Policy)",
       privacyText: `হিসাববট (HisabBot) আপনার ব্যক্তিগত ও ব্যবসায়িক তথ্যের সর্বোচ্চ গোপনীয়তা রক্ষায় প্রতিশ্রুতিবদ্ধ।
       
-১. তথ্যের সংরক্ষণ: আপনার কাস্টমার তালিকা, বাকি এবং জমার সমস্ত হিসাব আপনার নিজস্ব অ্যান্ড্রয়েড ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে।
+১. তথ্যের সংরক্ষণ: আপনার কাস্টমার তালিকা, দেনা-পাওনা, বাকি এবং জমার সমস্ত হিসাব আপনার নিজস্ব অ্যান্ড্রয়েড ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে।
 ২. ভয়েস ইনপুট প্রসেসিং: যখন আপনি মুখে বাংলায় কথা বলেন, তখন সেই নির্দিষ্ট ভয়েস অডিওটি নির্ভুলভাবে টেক্সটে রূপান্তরের জন্য সাময়িকভাবে নিরাপদ প্রক্রিয়ায় ব্যবহৃত হয়। আমরা কোনো বাণিজ্যিক বিজ্ঞাপনে এই ভয়েস বিক্রি বা ব্যবহার করি না।
 ৩. কোনো অপ্রত্যাশিত ট্র্যাকিং নেই: এই সংস্করণে কোনো বাণিজ্যিক ট্র্যাকার বা অনাকাঙ্ক্ষিত বিজ্ঞাপন কোড অন্তর্ভুক্ত নেই।
 ৪. আপনার নিয়ন্ত্রণ: আপনার সমস্ত তথ্য যেকোনো সময় আপনার ফোন থেকে মুছে ফেলার বা ব্যাকআপ নেওয়ার পূর্ণ নিয়ন্ত্রণ আপনার হাতে।`,
@@ -248,8 +252,8 @@ export const TRANSLATIONS = {
 
   en: {
     meta: {
-      title: "HisabBot | Keep customer dues and payments by speaking",
-      description: "A modern digital ledger built for Bangladeshi shopkeepers. Speak transactions naturally in Bangla, review on-screen confirmation, and save with one tap. 100% offline-ready.",
+      title: "HisabBot | Keep shop and personal debt records by speaking",
+      description: "A modern dual-mode digital ledger for Bangladeshi shops and personal debts. Speak transactions naturally in Bangla, review on-screen confirmation, and save with one tap. 100% offline-ready with monthly reports.",
     },
     nav: {
       brand: "HisabBot",
@@ -258,26 +262,27 @@ export const TRANSLATIONS = {
       howItWorks: "How It Works",
       demo: "Live Demo",
       features: "Features",
+      guide: "User Guide",
       faq: "FAQ",
       downloadBtn: "Download App",
       langSwitch: "বাংলা",
     },
     hero: {
-      badge: "Android Prototype Edition",
-      headline: "Keep customer dues and payments by speaking.",
-      subheadline: "Replace paper shop ledgers effortlessly. Speak transactions naturally in Bangla, review on-screen details, and confirm with one tap.",
+      badge: "Shop & Personal Khata • Android v1.2.0",
+      headline: "Keep shop and personal debt records by speaking.",
+      subheadline: "Whether managing store credits or personal loans with friends and family—keep everything organized effortlessly. Speak naturally in Bangla, review on-screen details, and confirm with one tap.",
       ctaDownload: "Download APK to Test",
       ctaQr: "Scan QR Code",
       sizeBadge: "Version v1.2.0 • 26 MB",
       trustBullets: [
-        "Always review before saving to prevent entry mistakes",
-        "Manual ledger entry works 100% offline without internet",
-        "Completely ad-free and data stays secured on your device"
+        "🏪 Business Mode: Customer credit, payments, and cash sales",
+        "👤 Personal Mode: Track personal debts and receivables",
+        "📊 Monthly Reports, aging alerts, and 1-tap WhatsApp reminders"
       ],
       previewTitle: "HisabBot Live Preview",
       listening: "Listening...",
       parsedCardTitle: "Review Transaction",
-      customerLabel: "Customer:",
+      customerLabel: "Name / Customer:",
       customerVal: "Rahim Bhai",
       typeLabel: "Entry Type:",
       typeValCredit: "Credit (বাকি)",
@@ -288,7 +293,7 @@ export const TRANSLATIONS = {
       spokenPrompt: "“Record 500 Taka credit for Rahim Bhai?”",
       btnCancel: "✕ Cancel",
       btnConfirm: "✓ Confirm",
-      statusConfirmed: "✓ 500 Taka credit recorded for Rahim successfully.",
+      statusConfirmed: "✓ Transaction recorded in digital ledger successfully.",
     },
     betaNotice: {
       tag: "Notice & Disclaimer",
@@ -297,45 +302,45 @@ export const TRANSLATIONS = {
     },
     benefits: {
       sectionTag: "Why HisabBot?",
-      title: "Leave paper khatas behind with 3x faster entries",
-      subtitle: "No more searching through piles of worn paper notebooks in a crowded shop. Record debts and payments as fast as speaking.",
+      title: "Shop & personal finances—all in one place 3x faster",
+      subtitle: "No more searching through piles of worn paper notebooks or forgetting who owes you what. Speak naturally and let AI keep your ledger organized.",
       items: [
         {
+          icon: "👥",
+          title: "Personal & Business Dual Mode",
+          desc: "Choose between 'Shop/Store Khata' (credit, payments, cash sales) and 'Personal Khata' (debts, receivables, loans) right from the first setup screen."
+        },
+        {
           icon: "⚡",
-          title: "3x Faster Entry",
-          desc: "Rushing during busy store hours? In just 5 seconds, simply say in Bangla: 'Rahim took 500 Taka credit'. Instant entry ready."
+          title: "5-Second Voice Entry",
+          desc: "In busy hours, just speak in Bangla: 'Rahim took 500 credit' or 'Lent 2000 to Sakib'. Transactions are structured on-screen instantly."
         },
         {
-          icon: "🛡️",
-          title: "Zero Risk of Misentry",
-          desc: "AI never saves blindly. It clearly displays customer name, amount, and type, and reads it aloud. It saves only after your explicit tap."
+          icon: "⚠️",
+          title: "Dashboard Aging Warnings",
+          desc: "Spot overdue debts with color-coded aging buckets on your dashboard, and send 1-tap WhatsApp, SMS, or direct phone call reminders."
         },
         {
-          icon: "📴",
-          title: "100% Offline Ledger",
-          desc: "Spotty network at your shop? No problem. The manual ledger works fully offline. Your business operations never get interrupted."
-        },
-        {
-          icon: "📲",
-          title: "1-Tap Payment Reminder",
-          desc: "No need to look up phone numbers. Initiate a phone call or generate a prefilled WhatsApp payment reminder with a single tap."
+          icon: "📊",
+          title: "Monthly Reports & Analytics",
+          desc: "View comprehensive monthly audit summaries showing total collections, new credits, outstanding debt aging, and net balances."
         }
       ]
     },
     howItWorks: {
       sectionTag: "Simple Steps",
       title: "Record transactions in 3 easy steps",
-      subtitle: "No complicated menus or confusing forms. Any shopkeeper can start using it effortlessly from day one.",
+      subtitle: "No complicated accounting terminology. Any shopkeeper or individual can start using it effortlessly from day one.",
       steps: [
         {
           step: "01",
           title: "Speak in Bangla",
-          desc: "Tap the mic and speak in natural conversational Bangla: 'Karim Bhai paid 300 Taka' or 'Rahim Bhai took 500 Taka credit'."
+          desc: "Tap the mic and speak in natural conversational Bangla: 'Karim Bhai paid 300 Taka' or 'Borrowed 2000 Taka from Uncle'."
         },
         {
           step: "02",
           title: "Review on Screen",
-          desc: "HisabBot automatically extracts customer name, transaction type, and amount, showing it neatly with voice confirmation."
+          desc: "HisabBot automatically extracts person name, transaction type, and amount, showing it neatly with spoken confirmation."
         },
         {
           step: "03",
@@ -346,13 +351,15 @@ export const TRANSLATIONS = {
     },
     demo: {
       sectionTag: "Interactive Simulator",
-      title: "Try it yourself to see how it works",
-      subtitle: "Click any sample phrase below to see how HisabBot parses speech and presents it for verification.",
+      title: "Try both shop and personal entries yourself",
+      subtitle: "Click any sample phrase below to see how HisabBot handles store debts, cash sales, and personal loans.",
       presetsLabel: "Click a sample sentence:",
       presets: [
-        { text: "Rahim took 500 Taka credit", customer: "Rahim Bhai", type: "credit", amount: "৳ 500", note: "Grocery items" },
-        { text: "Karim Bhai paid 1000 Taka", customer: "Karim Bhai", type: "payment", amount: "৳ 1,000", note: "Previous balance settlement" },
-        { text: "Akash cash sale 250 Taka", customer: "Akash", type: "cash", amount: "৳ 250", note: "Cash sale" }
+        { text: "🏪 Rahim took 500 Taka credit (Shop)", customer: "Rahim Bhai", type: "credit", amount: "৳ 500", note: "Grocery items", mode: "business" },
+        { text: "🏪 Karim Bhai paid 1000 Taka (Shop)", customer: "Karim Bhai", type: "payment", amount: "৳ 1,000", note: "Previous balance settlement", mode: "business" },
+        { text: "💵 Akash cash sale 250 Taka (Cash)", customer: "Akash", type: "cash", amount: "৳ 250", note: "Cash sale", mode: "business" },
+        { text: "👤 Lent 5000 Taka to Sakib (Personal Receivable)", customer: "Sakib", type: "personal_paoana", amount: "৳ 5,000", note: "Emergency personal loan", mode: "personal" },
+        { text: "👤 Borrowed 2000 Taka from Uncle (Personal Debt)", customer: "Uncle", type: "personal_dena", amount: "৳ 2,000", note: "Personal borrowing", mode: "personal" }
       ],
       speakingAnim: "Interpreting voice input...",
       verifiedLabel: "Verification Guardrail",
@@ -361,38 +368,38 @@ export const TRANSLATIONS = {
     },
     features: {
       sectionTag: "Features",
-      title: "Built specifically for practical store needs",
-      subtitle: "No unnecessary SaaS bloat—just the features that matter to real shopkeepers.",
+      title: "Built specifically for practical everyday financial needs",
+      subtitle: "Everything you need to manage store credit and personal debts with zero complexity.",
       list: [
+        {
+          icon: "🏪/👤",
+          title: "Personal & Business Dual Mode",
+          desc: "Two distinct ledger workspaces in one app. Switch easily between shopkeeper credit bookkeeping and personal loan management."
+        },
         {
           icon: "🎙️",
           title: "Bangla Voice Intelligence",
-          desc: "Powered by Gemini AI to naturally understand everyday shopkeeper dialect and spoken phrasing."
+          desc: "Powered by Gemini AI to naturally understand everyday shop dialect, regional accents, and colloquial phrasing."
         },
         {
-          icon: "✅",
-          title: "Mandatory Confirmation Guardrail",
-          desc: "To eliminate misinterpretation risks, every voice entry requires your explicit tap before writing to database."
+          icon: "⚠️",
+          title: "Dashboard Aging Warnings",
+          desc: "Identify overdue debts effortlessly. Categorized into 0-7 days, 8-30 days, 31-60 days, and 60+ days aging buckets."
         },
         {
-          icon: "📖",
-          title: "Offline-First Local Ledger",
-          desc: "All your customer records stay safe on your phone's local storage. Accessible anytime, even with no internet."
+          icon: "📲",
+          title: "1-Tap Collection Handoffs",
+          desc: "Speed up debt collections with direct 1-tap phone dialing and preformatted WhatsApp / SMS reminder messages."
         },
         {
-          icon: "👥",
-          title: "Customer Balance & History",
-          desc: "Check outstanding balances at a glance. Access a detailed timeline of past payments and credits per customer."
-        },
-        {
-          icon: "📞",
-          title: "Collection Handoffs",
-          desc: "Speed up collections with direct 1-tap phone dialing and preformatted WhatsApp reminder messages."
+          icon: "📊",
+          title: "Monthly Reports & Analytics",
+          desc: "Understand your financial health at a glance with monthly collection summaries, credit aging, and customer balance timelines."
         },
         {
           icon: "🔐",
           title: "PIN & Biometric Lock",
-          desc: "Keep your store's finances confidential with a 4-digit security PIN and fingerprint biometric authentication."
+          desc: "Keep your store's finances and personal debts completely confidential with a 4-digit security PIN and fingerprint biometric unlock."
         }
       ]
     },
@@ -432,8 +439,8 @@ export const TRANSLATIONS = {
       subtitle: "Clear answers to common questions about HisabBot.",
       items: [
         {
-          q: "1. Is HisabBot free to use during the prototype test?",
-          a: "Yes! During the current testing and beta evaluation period, HisabBot is 100% free to download and use."
+          q: "1. Is HisabBot only for shopkeepers or can individuals use it too?",
+          a: "HisabBot is designed for both! Right from the first setup screen, you can choose whether you want 'Store/Business Khata' (customer credit, payments, cash sales) or 'Personal Khata' (tracking debts and receivables between friends, relatives, and colleagues)."
         },
         {
           q: "2. Does the voice feature work without an internet connection?",
@@ -441,25 +448,26 @@ export const TRANSLATIONS = {
         },
         {
           q: "3. What happens if the AI misunderstands what I said?",
-          a: "Nothing is saved automatically. HisabBot's core safety guardrail requires it to display customer name, amount, and type on screen while reading it back. It commits to the ledger only when you press 'Confirm'. If wrong, you can cancel or re-speak with one tap."
+          a: "Nothing is saved automatically. HisabBot's core safety guardrail requires it to display customer/person name, amount, and type on screen while reading it back. It commits to the ledger only when you press 'Confirm'. If wrong, you can cancel or re-speak with one tap."
         },
         {
-          q: "4. Where is my shop's financial data stored?",
-          a: "Your records are saved locally inside your phone's secure on-device database. You can also enable a 4-digit PIN lock and fingerprint unlock to ensure privacy."
+          q: "4. Can I view monthly summaries and reports?",
+          a: "Yes! HisabBot includes a comprehensive Reports section where you can track monthly collections, new dues, and overdue debt aging buckets (0-7 days, 8-30 days, 31-60 days, 60+ days)."
         },
         {
-          q: "5. Is there an iPhone / iOS version available?",
-          a: "Currently, the prototype is built specifically for Android. An iOS release will be evaluated following the Android beta period."
+          q: "5. Can I send payment reminders to debtors?",
+          a: "Yes! From any customer's profile, you can initiate a direct 1-tap phone call or generate preformatted WhatsApp and SMS reminder drafts."
         }
       ]
     },
     footer: {
-      tagline: "Keep customer dues and payments by speaking. The trusted digital ledger for small shops.",
-      brandDesc: "HisabBot by KothaBot — Built locally to empower Bangladeshi shopkeepers and small businesses.",
+      tagline: "Keep shop and personal debt records by speaking. The trusted digital ledger for small businesses and individuals.",
+      brandDesc: "HisabBot by KothaBot — Built locally to empower Bangladeshi shopkeepers and individuals.",
       quickLinksTitle: "Quick Links",
       navWhy: "Why Us",
       navHow: "How It Works",
       navDemo: "Live Demo",
+      navGuide: "User Guide & Tutorial",
       navDownload: "Download APK",
       legalTitle: "Legal & Privacy",
       privacyLink: "Privacy Policy",
