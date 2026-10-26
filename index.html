@@ -113,23 +113,76 @@
           </ul>
         </div>
 
-        <!-- Phone Mockup Preview -->
+        <!-- Premium Phone Mockup Preview with Ambient Glow & Floating Badges -->
         <div class="hero-phone-container">
+          <!-- Ambient glowing aura behind phone -->
+          <div class="phone-aura-glow"></div>
+
+          <!-- Floating Corporate SaaS Badges -->
+          <div class="floating-badge badge-top-left">
+            <span class="badge-icon">🎙️</span>
+            <div class="badge-text-group">
+              <span class="badge-main-title">বাংলা ভয়েস AI</span>
+              <span class="badge-sub-title">Gemini Direct</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <span class="badge-icon">🛡️</span>
+            <div class="badge-text-group">
+              <span class="badge-main-title">১০০% ভেরিফাইড</span>
+              <span class="badge-sub-title">অনুমতি ছাড়া নো রাইট</span>
+            </div>
+          </div>
+
+          <!-- Premium Flagship Smartphone Frame -->
           <div class="phone-mockup-frame">
-            <div class="phone-speaker-notch"></div>
+            <!-- Hardware Buttons -->
+            <div class="phone-button-volume-up"></div>
+            <div class="phone-button-volume-down"></div>
+            <div class="phone-button-power"></div>
+
+            <!-- Glass Reflection Glare -->
+            <div class="phone-glass-reflection"></div>
+
+            <!-- Screen Container -->
             <div class="phone-screen-content">
-              <div class="phone-app-bar">
-                <div class="phone-app-title">
-                  <img src="/ic_hisabbot_logo.png" style="width:20px;height:20px;border-radius:4px" alt="icon">
-                  <span data-i18n="hero.previewTitle">হিসাববট লাইভ প্রিভিউ</span>
+              <!-- Modern Flagship Status Bar with Dynamic Island -->
+              <div class="phone-status-bar">
+                <span class="status-time">০৯:৪১</span>
+                <div class="dynamic-island">
+                  <span class="camera-lens"></span>
                 </div>
-                <span style="font-size:0.75rem;opacity:0.85">Android App</span>
+                <div class="status-icons">
+                  <svg class="status-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.64 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                  <svg class="status-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4z"/></svg>
+                  <div class="battery-pill"><span class="battery-fill"></span></div>
+                </div>
               </div>
 
+              <!-- In-app Header Bar -->
+              <div class="phone-app-bar">
+                <div class="phone-app-title">
+                  <img src="/ic_hisabbot_logo.png" alt="icon">
+                  <div class="title-details">
+                    <span class="app-name-text" data-i18n="hero.previewTitle">হিসাববট লাইভ প্রিভিউ</span>
+                    <span class="app-status-badge">🟢 সক্রিয় খাতা</span>
+                  </div>
+                </div>
+                <span class="app-pill-tag">Android</span>
+              </div>
+
+              <!-- In-App Body -->
               <div class="phone-body">
+                <!-- Voice Activity Card -->
                 <div class="phone-voice-wave-card">
-                  <div class="voice-status-text" data-i18n="hero.listening">শুনছি...</div>
+                  <div class="voice-header-row">
+                    <div class="voice-status-text" data-i18n="hero.listening">শুনছি...</div>
+                    <span class="live-mic-pulse"></span>
+                  </div>
                   <div class="voice-waves-anim">
+                    <span class="wave-bar"></span>
+                    <span class="wave-bar"></span>
                     <span class="wave-bar"></span>
                     <span class="wave-bar"></span>
                     <span class="wave-bar"></span>
@@ -137,13 +190,18 @@
                     <span class="wave-bar"></span>
                   </div>
                   <div class="spoken-sentence-bubble">
+                    <span class="bubble-mic-icon">🎙️</span>
                     “রহিম আজকে ৫০০ টাকা বাকি নিছে”
                   </div>
                 </div>
 
+                <!-- Structured Transaction Confirmation Card -->
                 <div class="phone-dialog-card">
                   <div class="dialog-header">
-                    <span class="dialog-title" data-i18n="hero.parsedCardTitle">লেনদেন যাচাই করুন</span>
+                    <div class="dialog-title-group">
+                      <span class="dialog-title" data-i18n="hero.parsedCardTitle">লেনদেন যাচাই করুন</span>
+                      <span class="dialog-subtitle">AI স্বয়ংক্রিয়ভাবে আলাদা করেছে</span>
+                    </div>
                     <span class="badge-tag-credit" data-i18n="hero.typeValCredit">বাকি (Credit)</span>
                   </div>
 
@@ -152,7 +210,7 @@
                       <span class="dialog-row-label" data-i18n="hero.customerLabel">গ্রাহকের নাম:</span>
                       <span class="dialog-row-val" data-i18n="hero.customerVal">রহিম ভাই</span>
                     </div>
-                    <div class="dialog-row">
+                    <div class="dialog-row highlight-amount-row">
                       <span class="dialog-row-label" data-i18n="hero.amountLabel">টাকার পরিমাণ:</span>
                       <span class="dialog-amount" data-i18n="hero.amountVal">৳ ৫০০</span>
                     </div>
@@ -163,12 +221,15 @@
                   </div>
 
                   <div class="spoken-tts-quote" data-i18n="hero.spokenPrompt">
+                    <span class="speaker-icon">🔊</span>
                     “রহিম ভাইয়ের খাতায় ৫০০ টাকা বাকি উঠাবো?”
                   </div>
 
                   <div class="dialog-actions">
                     <button class="btn-phone-cancel" id="heroPhoneCancelBtn" data-i18n="hero.btnCancel">✕ বাতিল</button>
-                    <button class="btn-phone-confirm" id="heroPhoneConfirmBtn" data-i18n="hero.btnConfirm">✓ ঠিক আছে</button>
+                    <button class="btn-phone-confirm glow-confirm-btn" id="heroPhoneConfirmBtn" data-i18n="hero.btnConfirm">
+                      <span>✓ ঠিক আছে</span>
+                    </button>
                   </div>
                 </div>
 

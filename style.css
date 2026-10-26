@@ -433,63 +433,315 @@ button {
 }
 
 /* ==========================================================================
-   Hero Visual Phone Mockup
+   Hero Visual Phone Mockup (Flagship Corporate Look & Floating Badges)
    ========================================================================== */
 .hero-phone-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  perspective: 1000px;
+  padding: 1rem 0;
 }
 
-.phone-mockup-frame {
-  width: 100%;
-  max-width: 340px;
-  background-color: #0f172a;
-  border: 8px solid #1e293b;
-  border-radius: 40px;
-  box-shadow: var(--shadow-xl), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  position: relative;
+/* Ambient Glowing Aura */
+.phone-aura-glow {
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.32) 0%, rgba(27, 94, 32, 0.15) 45%, transparent 70%);
+  filter: blur(55px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: auraBreathe 6s ease-in-out infinite;
 }
 
-.phone-speaker-notch {
-  width: 80px;
-  height: 4px;
-  background-color: #334155;
-  border-radius: 2px;
-  margin: 10px auto 6px;
+@keyframes auraBreathe {
+  0%, 100% { transform: scale(0.92) translate3d(0, 0, 0); opacity: 0.65; }
+  50% { transform: scale(1.08) translate3d(0, -8px, 0); opacity: 0.95; }
 }
 
-.phone-screen-content {
-  background-color: #f8fafc;
-  min-height: 540px;
+/* Floating Corporate SaaS Badges */
+.floating-badge {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 14px;
+  padding: 0.65rem 0.95rem;
+  box-shadow: 0 16px 32px -6px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  z-index: 12;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.badge-icon {
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.badge-text-group {
   display: flex;
   flex-direction: column;
 }
 
-.phone-app-bar {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  padding: 0.75rem 1rem;
+.badge-main-title {
+  font-size: 0.825rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.badge-sub-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.badge-top-left {
+  left: -20px;
+  top: 45px;
+  animation: floatBadge1 4.5s ease-in-out infinite;
+}
+
+.badge-bottom-right {
+  right: -20px;
+  bottom: 65px;
+  animation: floatBadge2 5.2s ease-in-out infinite;
+}
+
+@keyframes floatBadge1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes floatBadge2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(7px); }
+}
+
+/* Flagship Smartphone Frame */
+.phone-mockup-frame {
+  width: 100%;
+  max-width: 328px;
+  background-color: #0b0f19;
+  border: 11px solid #1e293b;
+  border-radius: 48px;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 25px 60px -15px rgba(15, 23, 42, 0.35),
+    0 12px 28px -8px rgba(27, 94, 32, 0.22);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  animation: phoneFloat 5s ease-in-out infinite;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.phone-mockup-frame:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.25),
+    0 35px 75px -15px rgba(15, 23, 42, 0.45),
+    0 18px 40px -10px rgba(27, 94, 32, 0.32);
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.35deg); }
+}
+
+/* Physical Hardware Buttons */
+.phone-button-volume-up {
+  position: absolute;
+  left: -13px;
+  top: 110px;
+  width: 3px;
+  height: 38px;
+  background: #475569;
+  border-radius: 2px 0 0 2px;
+  z-index: 3;
+}
+
+.phone-button-volume-down {
+  position: absolute;
+  left: -13px;
+  top: 156px;
+  width: 3px;
+  height: 38px;
+  background: #475569;
+  border-radius: 2px 0 0 2px;
+  z-index: 3;
+}
+
+.phone-button-power {
+  position: absolute;
+  right: -13px;
+  top: 130px;
+  width: 3px;
+  height: 52px;
+  background: #475569;
+  border-radius: 0 2px 2px 0;
+  z-index: 3;
+}
+
+/* Specular Glass Reflection */
+.phone-glass-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.03) 45%, transparent 65%);
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 36px 36px 0 0;
+}
+
+/* Screen Content */
+.phone-screen-content {
+  background-color: #f8fafc;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Top Modern Status Bar with Dynamic Island */
+.phone-status-bar {
+  background-color: #0a3b0f;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1.15rem 0.35rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 0.725rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 6;
+}
+
+.dynamic-island {
+  width: 86px;
+  height: 18px;
+  background-color: #000000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.camera-lens {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #312e81 0%, #030712 80%);
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-ico {
+  width: 12px;
+  height: 12px;
+}
+
+.battery-pill {
+  width: 18px;
+  height: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 2.5px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.battery-pill::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 1.5px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0 1px 1px 0;
+}
+
+.battery-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #22c55e;
+  border-radius: 1px;
+}
+
+/* In-app Header Bar */
+.phone-app-bar {
+  background: linear-gradient(180deg, #0a3b0f 0%, #1b5e20 100%);
+  color: #ffffff;
+  padding: 0.65rem 1rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .phone-app-title {
-  font-size: 1rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
+}
+
+.phone-app-title img {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.title-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-name-text {
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.app-status-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #86efac;
+}
+
+.app-pill-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
 }
 
 .phone-body {
-  padding: 1.25rem 1rem;
+  padding: 1.1rem 0.95rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 /* Voice Input Card inside Phone */
@@ -497,16 +749,32 @@ button {
   background-color: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 1rem;
+  padding: 0.85rem;
   text-align: center;
   box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.voice-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 .voice-status-text {
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.825rem;
+  font-weight: 800;
   color: var(--color-primary);
-  margin-bottom: 0.5rem;
+}
+
+.live-mic-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulseGreen 1.5s infinite;
 }
 
 .voice-waves-anim {
@@ -514,22 +782,25 @@ button {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  height: 32px;
+  height: 28px;
   margin-bottom: 0.5rem;
 }
 
-.wave-bar {
-  width: 4px;
-  height: 10px;
-  background-color: var(--color-primary);
-  border-radius: 2px;
+.voice-waves-anim .wave-bar {
+  width: 3.5px;
+  height: 8px;
+  background: linear-gradient(180deg, #16a34a 0%, #1b5e20 100%);
+  border-radius: 3px;
   animation: wavePulse 1.2s infinite ease-in-out;
 }
 
-.wave-bar:nth-child(2) { animation-delay: 0.15s; }
-.wave-bar:nth-child(3) { animation-delay: 0.3s; }
-.wave-bar:nth-child(4) { animation-delay: 0.45s; }
-.wave-bar:nth-child(5) { animation-delay: 0.6s; }
+.wave-bar:nth-child(1) { animation-delay: 0.1s; }
+.wave-bar:nth-child(2) { animation-delay: 0.25s; }
+.wave-bar:nth-child(3) { animation-delay: 0.4s; }
+.wave-bar:nth-child(4) { animation-delay: 0.55s; }
+.wave-bar:nth-child(5) { animation-delay: 0.7s; }
+.wave-bar:nth-child(6) { animation-delay: 0.85s; }
+.wave-bar:nth-child(7) { animation-delay: 1s; }
 
 @keyframes wavePulse {
   0%, 100% { height: 6px; }
@@ -537,49 +808,67 @@ button {
 }
 
 .spoken-sentence-bubble {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.825rem;
+  font-weight: 700;
   color: var(--text-primary);
   background-color: var(--color-primary-bg);
-  padding: 0.4rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.bubble-mic-icon {
+  font-size: 0.85rem;
 }
 
 /* Parsed Confirmation Dialog inside Phone */
 .phone-dialog-card {
   background-color: #ffffff;
-  border: 2px solid var(--color-primary);
+  border: 1.5px solid var(--color-primary);
   border-radius: var(--radius-md);
-  padding: 1rem;
-  box-shadow: var(--shadow-md);
+  padding: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes popIn {
-  0% { transform: scale(0.95); opacity: 0; }
+  0% { transform: scale(0.96); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
 .dialog-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-light);
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.75rem;
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.65rem;
+}
+
+.dialog-title-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .dialog-title {
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 800;
   color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.dialog-subtitle {
+  font-size: 0.675rem;
+  color: var(--text-muted);
+  margin-top: 1px;
 }
 
 .badge-tag-credit {
   background-color: var(--color-debt-red-bg);
   color: var(--color-debt-red);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   font-weight: 800;
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-full);
@@ -589,7 +878,7 @@ button {
 .badge-tag-payment {
   background-color: var(--color-payment-green-bg);
   color: var(--color-payment-green);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   font-weight: 800;
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-full);
@@ -599,7 +888,7 @@ button {
 .badge-tag-cash {
   background-color: #e0f2fe;
   color: #0284c7;
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   font-weight: 800;
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-full);
@@ -609,18 +898,20 @@ button {
 .dialog-details-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 0.85rem;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
 }
 
 .dialog-row {
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
+  align-items: center;
+  font-size: 0.825rem;
 }
 
 .dialog-row-label {
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 .dialog-row-val {
@@ -628,32 +919,42 @@ button {
   color: var(--text-primary);
 }
 
+.highlight-amount-row {
+  background: #fef2f2;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  margin: 0.15rem 0;
+}
+
 .dialog-amount {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--color-debt-red);
 }
 
 .spoken-tts-quote {
-  font-size: 0.825rem;
-  font-weight: 600;
-  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--color-primary-dark);
   background-color: var(--color-primary-bg);
-  padding: 0.5rem 0.75rem;
+  padding: 0.45rem 0.65rem;
   border-radius: var(--radius-sm);
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
 }
 
 .dialog-actions {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.3fr;
   gap: 0.5rem;
 }
 
 .btn-phone-cancel {
-  padding: 0.5rem;
+  padding: 0.55rem;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   font-size: 0.8rem;
@@ -661,26 +962,58 @@ button {
   color: var(--text-secondary);
   background-color: #ffffff;
   text-align: center;
+  transition: all 0.15s ease;
 }
 
-.btn-phone-confirm {
-  padding: 0.5rem;
-  background-color: var(--color-primary);
+.btn-phone-cancel:hover {
+  background-color: #f1f5f9;
+}
+
+.glow-confirm-btn {
+  padding: 0.55rem;
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.825rem;
+  font-weight: 800;
   color: #ffffff;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%) !important;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.glow-confirm-btn:hover {
+  transform: translateY(-1px);
+}
+
+.glow-confirm-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  animation: btnShimmer 3.2s infinite;
+}
+
+@keyframes btnShimmer {
+  0% { left: -100%; }
+  35%, 100% { left: 180%; }
 }
 
 .phone-toast-notice {
-  background-color: var(--color-primary-dark);
+  background-color: #0a3b0f;
   color: #ffffff;
   font-size: 0.75rem;
-  padding: 0.45rem 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
   border-radius: var(--radius-sm);
   text-align: center;
   display: none;
+  animation: fadeIn 0.2s ease;
 }
 
 /* ==========================================================================
@@ -1569,6 +1902,23 @@ button {
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
+@media (max-width: 639px) {
+  .badge-top-left {
+    left: 0;
+    top: 20px;
+    transform: scale(0.85);
+  }
+  .badge-bottom-right {
+    right: 0;
+    bottom: 40px;
+    transform: scale(0.85);
+  }
+  .phone-mockup-frame {
+    max-width: 305px;
+    border-width: 8px;
+  }
+}
+
 @media (min-width: 640px) {
   .hero-headline {
     font-size: 2.85rem;
