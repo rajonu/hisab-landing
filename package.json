@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && rm -f dist/dokan-voice.apk",
+    "build": "vite build && rm -f dist/hisab-bot.apk dist/dokan-voice.apk",
     "preview": "vite preview",
     "deploy": "npm run build && CLOUDFLARE_ACCOUNT_ID=f7b63a9b274f43bd60919b91973a0d90 wrangler pages deploy dist --project-name hisab-landing --commit-dirty=true"
   },

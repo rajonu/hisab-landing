@@ -21,7 +21,7 @@ export const TRANSLATIONS = {
       subheadline: "দোকানের কাগজ-কলমের খাতা বদলে ফেলুন সহজে। মুখে বাংলায় লেনদেন বলুন, স্ক্রিনে দেখে মিলিয়ে নিন, তারপর ১ ক্লিকে সেভ করুন।",
       ctaDownload: "APK ডাউনলোড করে টেস্ট করুন",
       ctaQr: "QR স্ক্যান করুন",
-      sizeBadge: "ভার্সন v1.0.0-beta • ২৭ মেগাবাইট",
+      sizeBadge: "ভার্সন v1.2.0 • ২৬ মেগাবাইট",
       trustBullets: [
         "ভুল এড়াতে সেভ করার আগে স্ক্রিনে যাচাইয়ের নিশ্চয়তা",
         "ইন্টারনেট না থাকলেও সাধারণ ম্যানুয়াল খাতা শতভাগ সচল",
@@ -156,7 +156,7 @@ export const TRANSLATIONS = {
       apkCardTitle: "অ্যান্ড্রয়েড সরাসরি ইনস্টলেশন (APK)",
       apkCardDesc: "অ্যান্ড্রয়েড ৮.০ বা তার পরবর্তী যেকোনো ফোনে সরাসরি ইনস্টল করা যাবে।",
       btnDownload: "সরাসরি APK ডাউনলোড করুন",
-      fileMeta: "ফাইল সাইজ: ২৭ মেগাবাইট • সংস্করণ: v1.0.0-beta",
+      fileMeta: "ফাইল সাইজ: ২৬ মেগাবাইট • সংস্করণ: v1.2.0",
       installGuideLink: "কীভাবে ফোনে ইনস্টল করবেন? গাইড দেখুন",
       qrTitle: "মোবাইল দিয়ে QR কোড স্ক্যান করুন",
       qrDesc: "ফোনের ক্যামেরা বা QR স্ক্যানার দিয়ে স্ক্যান করলেই সরাসরি ডাউনলোড অপশন চলে আসবে।",
@@ -173,7 +173,7 @@ export const TRANSLATIONS = {
       title: "সহজে APK ইনস্টল করার নির্দেশিকা",
       steps: [
         "১. উপরের 'সরাসরি APK ডাউনলোড করুন' বাটনে চাপ দিন। ফাইলটি ডাউনলোড হওয়া পর্যন্ত অপেক্ষা করুন।",
-        "২. ডাউনলোড শেষ হলে নোটিফিকেশন বার থেকে অথবা Downloads ফোল্ডার থেকে 'dokan-voice.apk' ফাইলে চাপ দিন।",
+        "২. ডাউনলোড শেষ হলে নোটিফিকেশন বার থেকে অথবা Downloads ফোল্ডার থেকে 'hisab-bot.apk' ফাইলে চাপ দিন।",
         "৩. যদি আপনার ফোন 'Install unknown apps' বা 'অচেনা উৎস থেকে ইনস্টল' করার অনুমতি চায়, তবে সেটিংসে গিয়ে ব্রাউজারটিকে অনুমতি দিন।",
         "৪. এরপর 'Install' বাটনে চাপ দিন। ইনস্টল সম্পন্ন হলে হিসাববট অ্যাপটি ওপেন করে ব্যবহার শুরু করুন।"
       ],
@@ -242,7 +242,7 @@ export const TRANSLATIONS = {
     },
     stickyMobile: {
       text: "হিসাববট প্রোটোটাইপ (Android)",
-      btn: "APK ডাউনলোড (২৭MB)"
+      btn: "APK ডাউনলোড (২৬MB)"
     }
   },
 
@@ -268,7 +268,7 @@ export const TRANSLATIONS = {
       subheadline: "Replace paper shop ledgers effortlessly. Speak transactions naturally in Bangla, review on-screen details, and confirm with one tap.",
       ctaDownload: "Download APK to Test",
       ctaQr: "Scan QR Code",
-      sizeBadge: "Version v1.0.0-beta • 27 MB",
+      sizeBadge: "Version v1.2.0 • 26 MB",
       trustBullets: [
         "Always review before saving to prevent entry mistakes",
         "Manual ledger entry works 100% offline without internet",
@@ -403,7 +403,7 @@ export const TRANSLATIONS = {
       apkCardTitle: "Android Direct Installation (APK)",
       apkCardDesc: "Compatible with any Android device running Android 8.0 or higher.",
       btnDownload: "Download APK Directly",
-      fileMeta: "File Size: 27 MB • Version: v1.0.0-beta",
+      fileMeta: "File Size: 26 MB • Version: v1.2.0",
       installGuideLink: "How to install on your phone? View guide",
       qrTitle: "Scan QR code with your mobile",
       qrDesc: "Point your phone camera or QR scanner to open the download page directly on your mobile device.",
@@ -420,7 +420,7 @@ export const TRANSLATIONS = {
       title: "Quick Android APK Installation Guide",
       steps: [
         "1. Tap 'Download APK Directly' above and wait for the file to finish downloading.",
-        "2. Once downloaded, tap 'dokan-voice.apk' from your notification bar or Downloads folder.",
+        "2. Once downloaded, tap 'hisab-bot.apk' from your notification bar or Downloads folder.",
         "3. If prompted to allow 'Install unknown apps' or 'Allow from this source', enable permission in Android settings.",
         "4. Tap 'Install'. Once completed, launch HisabBot and begin testing."
       ],
@@ -489,7 +489,7 @@ export const TRANSLATIONS = {
     },
     stickyMobile: {
       text: "HisabBot Prototype (Android)",
-      btn: "Download APK (27MB)"
+      btn: "Download APK (26MB)"
     }
   }
 };
