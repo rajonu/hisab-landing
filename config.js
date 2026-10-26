@@ -40,7 +40,7 @@ export const CONFIG = {
 
   // Support & Contact Channels
   SUPPORT_EMAIL: 'support@kothabot.ai',
-  SUPPORT_WHATSAPP: 'https://wa.me/8801700000000',
+  SUPPORT_WHATSAPP: 'https://wa.me/8801581771780',
   ORGANIZATION_NAME: 'KothaBot',
   PRODUCT_NAME_BN: 'হিসাববট',
   PRODUCT_NAME_EN: 'HisabBot',
