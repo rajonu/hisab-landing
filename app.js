@@ -402,8 +402,10 @@ function setupEventListeners() {
   // Update Download and Contact URLs from CONFIG
   const heroDlBtn = document.getElementById('heroDownloadBtn');
   const mainDlBtn = document.getElementById('mainDownloadBtn');
+  const stickyDlBtn = document.getElementById('stickyDownloadBtn');
   if (heroDlBtn) heroDlBtn.href = CONFIG.APK_DOWNLOAD_URL;
   if (mainDlBtn) mainDlBtn.href = CONFIG.APK_DOWNLOAD_URL;
+  if (stickyDlBtn) stickyDlBtn.href = CONFIG.APK_DOWNLOAD_URL;
 
   const emailLink = document.getElementById('footerEmailLink');
   if (emailLink && CONFIG.SUPPORT_EMAIL) {
@@ -416,7 +418,83 @@ function setupEventListeners() {
   }
 }
 
+/**
+ * Automatically fetch latest release details from GitHub Releases API
+ * Dynamically keeps version badge, file size, release date, and download links 100% current.
+ */
+async function checkLatestRelease() {
+  if (!CONFIG.GITHUB_REPO) return;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${CONFIG.GITHUB_REPO}/releases/latest`, {
+      headers: { Accept: 'application/vnd.github.v3+json' },
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+
+    const tagName = data.tag_name || CONFIG.APK_VERSION;
+    const apkAsset = data.assets && data.assets.find((a) => a.name.endsWith('.apk'));
+    
+    let sizeMb = CONFIG.APK_SIZE;
+    let downloadUrl = CONFIG.APK_DOWNLOAD_URL;
+
+    if (apkAsset) {
+      if (apkAsset.size) {
+        sizeMb = (apkAsset.size / (1024 * 1024)).toFixed(1) + ' MB';
+      }
+      if (apkAsset.browser_download_url) {
+        downloadUrl = apkAsset.browser_download_url;
+      }
+    }
+
+    let formattedDateBn = CONFIG.APK_RELEASE_DATE;
+    let formattedDateEn = CONFIG.APK_RELEASE_DATE_EN;
+    if (data.published_at) {
+      const pubDate = new Date(data.published_at);
+      formattedDateEn = pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      try {
+        formattedDateBn = pubDate.toLocaleDateString('bn-BD', { month: 'long', day: 'numeric', year: 'numeric' });
+      } catch (e) {
+        formattedDateBn = formattedDateEn;
+      }
+    }
+
+    // Update hero badge
+    const heroSizeBadge = document.getElementById('heroSizeBadge');
+    if (heroSizeBadge) {
+      heroSizeBadge.textContent = currentLang === 'bn'
+        ? `ভার্সন ${tagName} • ${sizeMb}`
+        : `Version ${tagName} • ${sizeMb}`;
+    }
+
+    // Update file meta pills
+    const fileMetaPill = document.getElementById('fileMetaPill');
+    if (fileMetaPill) {
+      fileMetaPill.textContent = currentLang === 'bn'
+        ? `ফাইল সাইজ: ${sizeMb} • সংস্করণ: ${tagName}`
+        : `File size: ${sizeMb} • Version: ${tagName}`;
+    }
+
+    const releaseDatePill = document.getElementById('releaseDatePill');
+    if (releaseDatePill) {
+      releaseDatePill.textContent = currentLang === 'bn'
+        ? `রিলিজ: ${formattedDateBn}`
+        : `Released: ${formattedDateEn}`;
+    }
+
+    // Ensure buttons point to the real browser download URL
+    const heroDlBtn = document.getElementById('heroDownloadBtn');
+    const mainDlBtn = document.getElementById('mainDownloadBtn');
+    const stickyDlBtn = document.getElementById('stickyDownloadBtn');
+    if (heroDlBtn) heroDlBtn.href = downloadUrl;
+    if (mainDlBtn) mainDlBtn.href = downloadUrl;
+    if (stickyDlBtn) stickyDlBtn.href = downloadUrl;
+  } catch (err) {
+    console.debug('GitHub release auto-check info:', err);
+  }
+}
+
 // Initial Run
 updateTranslations();
 setupQRCode();
 setupEventListeners();
+checkLatestRelease();

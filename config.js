@@ -7,15 +7,18 @@ const IS_LOCAL = typeof window !== 'undefined' &&
   (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.startsWith('192.168.'));
 
 export const CONFIG = {
+  // Public Release Repository on GitHub
+  GITHUB_REPO: 'rajonu/hisab-landing',
+
   // APK Download Configuration
-  // Points to the auto-updating latest release on dokan-voice GitHub releases:
-  // https://github.com/rajonu/dokan-voice/releases/latest/download/hisab-bot.apk
+  // Points to the auto-updating latest release on hisab-landing GitHub releases (PUBLIC):
+  // https://github.com/rajonu/hisab-landing/releases/latest/download/hisab-bot.apk
   APK_DOWNLOAD_URL: IS_LOCAL 
     ? '/hisab-bot.apk' 
-    : 'https://github.com/rajonu/dokan-voice/releases/latest/download/hisab-bot.apk',
+    : 'https://github.com/rajonu/hisab-landing/releases/latest/download/hisab-bot.apk',
   
   // Specific release link
-  APK_RELEASE_LATEST_URL: 'https://github.com/rajonu/dokan-voice/releases/latest/download/hisab-bot.apk',
+  APK_RELEASE_LATEST_URL: 'https://github.com/rajonu/hisab-landing/releases/latest/download/hisab-bot.apk',
   APK_LOCAL_WIFI_URL: 'http://192.168.68.78:8080/hisab-bot.apk',
     
   APK_VERSION: 'v1.2.0',
