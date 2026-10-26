@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>হিসাববট (HisabBot) | কথা বলেই লিখুন বাকি-জমার হিসাব</title>
+  
+  <meta name="description" content="বাংলাদেশের দোকানদার ভাইদের জন্য আধুনিক ডিজিটাল খাতা। মুখে বাংলায় লেনদেন বলুন, স্ক্রিনে মিলিয়ে নিন এবং এক ক্লিকে সেভ করুন। অফলাইনেও সম্পূর্ণ সচল।">
+  <meta name="keywords" content="HisabBot, হিসাববট, KothaBot, কথা বট, দোকানদার ডিজিটাল খাতা, বাকি জমার হিসাব, bangla voice ledger, digital khata bangladesh">
+  <meta name="theme-color" content="#1B5E20">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="হিসাববট (HisabBot) | কথা বলেই লিখুন বাকি-জমার হিসাব">
+  <meta property="og:description" content="দোকানের কাগজ-কলমের খাতা বদলে ফেলুন সহজে। মুখে বাংলায় লেনদেন বলুন, স্ক্রিনে দেখে মিলিয়ে নিন, তারপর ১ ক্লিকে সেভ করুন।">
+  <meta property="og:image" content="/ic_hisabbot_logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/ic_hisabbot_logo.png">
+  <link rel="apple-touch-icon" href="/ic_hisabbot_logo.png">
+
+  <!-- Google Fonts: Hind Siliguri (Bengali) & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="lang-bn">
+
+  <!-- ========================================================================
+       Sticky Glass Navigation
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-link" aria-label="HisabBot Home">
+        <img src="/ic_hisabbot_logo.png" alt="HisabBot Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-name" data-i18n="nav.brand">হিসাববট</span>
+          <span class="brand-byline" data-i18n="nav.byLine">by KothaBot</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#benefits" data-i18n="nav.whyUs">কেন হিসাববট?</a>
+        <a href="#how-it-works" data-i18n="nav.howItWorks">কীভাবে কাজ করে</a>
+        <a href="#demo" data-i18n="nav.demo">লাইভ ডেমো</a>
+        <a href="#features" data-i18n="nav.features">সুবিধাসমূহ</a>
+        <a href="#faq" data-i18n="nav.faq">সাধারণ জিজ্ঞাসা</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="langToggleBtn" class="lang-toggle-btn" aria-label="Switch Language">
+          <span id="langSwitchLabel" data-i18n="nav.langSwitch">English</span>
+        </button>
+
+        <a href="#download" class="btn-header-cta" data-i18n="nav.downloadBtn">
+          অ্যাপ ডাউনলোড
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         Hero Section
+         ======================================================================== -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <span class="pulse-dot"></span>
+            <span data-i18n="hero.badge">অ্যান্ড্রয়েড প্রোটোটাইপ সংস্করণ</span>
+          </div>
+
+          <h1 class="hero-headline" data-i18n="hero.headline">
+            কথা বলেই লিখুন বাকি-জমার হিসাব।
+          </h1>
+
+          <p class="hero-subheadline" data-i18n="hero.subheadline">
+            দোকানের কাগজ-কলমের খাতা বদলে ফেলুন সহজে। মুখে বাংলায় লেনদেন বলুন, স্ক্রিনে দেখে মিলিয়ে নিন, তারপর ১ ক্লিকে সেভ করুন।
+          </p>
+
+          <div class="hero-actions-group">
+            <a href="/dokan-voice.apk" id="heroDownloadBtn" class="btn-primary-download" download>
+              <svg viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9992.4482.9992.9993 0 .5511-.4482.9997-.9992.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503C15.5802 8.4116 13.8443 8.125 12 8.125s-3.5802.2866-5.1368.8247L4.8409 5.4467a.4161.4161 0 0 0-.5677-.1521.4157.4157 0 0 0-.152 5676l1.9972 3.4592C2.6889 11.1867.343 14.2889 0 17.9622h24c-.343-3.6733-2.6889-6.7755-6.1185-8.6408"/></svg>
+              <span data-i18n="hero.ctaDownload">APK ডাউনলোড করে টেস্ট করুন</span>
+            </a>
+
+            <a href="#download" class="btn-secondary-qr">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <span data-i18n="hero.ctaQr">QR স্ক্যান করুন</span>
+            </a>
+          </div>
+
+          <div class="hero-meta-badge">
+            <span id="heroSizeBadge" data-i18n="hero.sizeBadge">ভার্সন v1.0.0-beta • ২৭ মেগাবাইট</span>
+          </div>
+
+          <ul class="hero-trust-bullets">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span data-i18n="hero.trustBullets.0">ভুল এড়াতে সেভ করার আগে স্ক্রিনে যাচাইয়ের নিশ্চয়তা</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span data-i18n="hero.trustBullets.1">ইন্টারনেট না থাকলেও সাধারণ ম্যানুয়াল খাতা শতভাগ সচল</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span data-i18n="hero.trustBullets.2">সম্পূর্ণ বিজ্ঞাপনমুক্ত ও আপনার ডিভাইসেই হিসাব সুরক্ষিত</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phone Mockup Preview -->
+        <div class="hero-phone-container">
+          <div class="phone-mockup-frame">
+            <div class="phone-speaker-notch"></div>
+            <div class="phone-screen-content">
+              <div class="phone-app-bar">
+                <div class="phone-app-title">
+                  <img src="/ic_hisabbot_logo.png" style="width:20px;height:20px;border-radius:4px" alt="icon">
+                  <span data-i18n="hero.previewTitle">হিসাববট লাইভ প্রিভিউ</span>
+                </div>
+                <span style="font-size:0.75rem;opacity:0.85">Android App</span>
+              </div>
+
+              <div class="phone-body">
+                <div class="phone-voice-wave-card">
+                  <div class="voice-status-text" data-i18n="hero.listening">শুনছি...</div>
+                  <div class="voice-waves-anim">
+                    <span class="wave-bar"></span>
+                    <span class="wave-bar"></span>
+                    <span class="wave-bar"></span>
+                    <span class="wave-bar"></span>
+                    <span class="wave-bar"></span>
+                  </div>
+                  <div class="spoken-sentence-bubble">
+                    “রহিম আজকে ৫০০ টাকা বাকি নিছে”
+                  </div>
+                </div>
+
+                <div class="phone-dialog-card">
+                  <div class="dialog-header">
+                    <span class="dialog-title" data-i18n="hero.parsedCardTitle">লেনদেন যাচাই করুন</span>
+                    <span class="badge-tag-credit" data-i18n="hero.typeValCredit">বাকি (Credit)</span>
+                  </div>
+
+                  <div class="dialog-details-list">
+                    <div class="dialog-row">
+                      <span class="dialog-row-label" data-i18n="hero.customerLabel">গ্রাহকের নাম:</span>
+                      <span class="dialog-row-val" data-i18n="hero.customerVal">রহিম ভাই</span>
+                    </div>
+                    <div class="dialog-row">
+                      <span class="dialog-row-label" data-i18n="hero.amountLabel">টাকার পরিমাণ:</span>
+                      <span class="dialog-amount" data-i18n="hero.amountVal">৳ ৫০০</span>
+                    </div>
+                    <div class="dialog-row">
+                      <span class="dialog-row-label" data-i18n="hero.noteLabel">নোট:</span>
+                      <span class="dialog-row-val" data-i18n="hero.noteVal">চাল ও চিনি</span>
+                    </div>
+                  </div>
+
+                  <div class="spoken-tts-quote" data-i18n="hero.spokenPrompt">
+                    “রহিম ভাইয়ের খাতায় ৫০০ টাকা বাকি উঠাবো?”
+                  </div>
+
+                  <div class="dialog-actions">
+                    <button class="btn-phone-cancel" id="heroPhoneCancelBtn" data-i18n="hero.btnCancel">✕ বাতিল</button>
+                    <button class="btn-phone-confirm" id="heroPhoneConfirmBtn" data-i18n="hero.btnConfirm">✓ ঠিক আছে</button>
+                  </div>
+                </div>
+
+                <div class="phone-toast-notice" id="heroPhoneToast" data-i18n="hero.statusConfirmed">
+                  ✓ রহিমের খাতায় ৫০০ টাকা বাকি সফলভাবে উঠানো হলো।
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Trust & Beta Notice Alert
+         ======================================================================== -->
+    <section class="trust-alert-section">
+      <div class="container">
+        <div class="trust-alert-card">
+          <div class="trust-alert-icon">⚠️</div>
+          <div class="trust-alert-content">
+            <h4 data-i18n="betaNotice.title">প্রোটোটাইপ / পরীক্ষামূলক সংস্করণ</h4>
+            <p data-i18n="betaNotice.desc">
+              হিসাববট বর্তমানে পরীক্ষামূলক প্রোটোটাইপ হিসেবে টেস্ট করা হচ্ছে। ভয়েস এন্ট্রির পর সর্বদা স্ক্রিনের তথ্য মিলিয়ে নিন এবং আপনার গুরুত্বপূর্ণ হিসাবের একটি ব্যাকআপ রাখুন। বর্তমান সংস্করণে ভয়েস প্রসেসিংয়ের জন্য ইন্টারনেটের প্রয়োজন হলেও অফলাইনে ম্যানুয়াল এন্ট্রি সম্পূর্ণ সচল থাকে।
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Problem -> Benefits Section
+         ======================================================================== -->
+    <section id="benefits" class="benefits-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag" data-i18n="benefits.sectionTag">কেন হিসাববট?</span>
+          <h2 class="section-title" data-i18n="benefits.title">কাগজের খাতার ঝামেলা দূর করুন ৩ গুণ দ্রুত</h2>
+          <p class="section-subtitle" data-i18n="benefits.subtitle">
+            দোকানের ব্যস্ত সময়ে খাতা খুঁজে পাতা উল্টানোর দিন শেষ। এখন হিসাব রাখা হবে মুখে কথা বলার মতোই সহজ।
+          </p>
+        </div>
+
+        <div class="benefits-grid" id="benefitsContainer">
+          <!-- Populated by translations -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         How It Works Section
+         ======================================================================== -->
+    <section id="how-it-works" class="how-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag" data-i18n="howItWorks.sectionTag">সহজ পদ্ধতি</span>
+          <h2 class="section-title" data-i18n="howItWorks.title">৩টি সহজ ধাপে বাকি-জমা রেকর্ড করুন</h2>
+          <p class="section-subtitle" data-i18n="howItWorks.subtitle">
+            কোনো জটিল মেন্যু নেই। যেকোনো দোকানদার ভাই প্রথম দিন থেকেই সহজে ব্যবহার করতে পারবেন।
+          </p>
+        </div>
+
+        <div class="steps-grid" id="stepsContainer">
+          <!-- Populated by translations -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Interactive Live Demo Simulator Section
+         ======================================================================== -->
+    <section id="demo" class="demo-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag" data-i18n="demo.sectionTag">লাইভ সিমুলেটর</span>
+          <h2 class="section-title" data-i18n="demo.title">নিজেই টেস্ট করে দেখুন কীভাবে কাজ করে</h2>
+          <p class="section-subtitle" data-i18n="demo.subtitle">
+            নিচের যেকোনো একটি বাক্যে ক্লিক করুন এবং দেখুন হিসাববট কীভাবে তাৎক্ষণিক লেনদেন আলাদা করে যাচাই করতে দেয়।
+          </p>
+        </div>
+
+        <div class="demo-box">
+          <div class="demo-presets-header" data-i18n="demo.presetsLabel">একটি নমুনা বাক্যে চাপ দিন:</div>
+          <div class="demo-chips-list" id="demoPresetsContainer">
+            <!-- Chips generated dynamically -->
+          </div>
+
+          <div class="demo-live-screen">
+            <div class="demo-screen-status">
+              <div class="status-indicator">
+                <span class="pulse-dot"></span>
+                <span id="demoStatusText" data-i18n="demo.speakingAnim">ভয়েস ইন্টারপ্রেট করা হচ্ছে...</span>
+              </div>
+              <span style="font-size:0.8rem;color:var(--text-muted)" data-i18n="demo.verifiedLabel">নিশ্চিতকরণ গার্ডরেল</span>
+            </div>
+
+            <div class="demo-transaction-result">
+              <div class="demo-field-grid">
+                <div class="demo-field-item">
+                  <label data-i18n="hero.customerLabel">গ্রাহকের নাম:</label>
+                  <div class="val" id="demoCustomerVal">রহিম ভাই</div>
+                </div>
+                <div class="demo-field-item">
+                  <label data-i18n="hero.typeLabel">লেনদেনের ধরন:</label>
+                  <div class="val" id="demoTypeVal">
+                    <span class="badge-tag-credit" id="demoTypeBadge">বাকি (Credit)</span>
+                  </div>
+                </div>
+                <div class="demo-field-item">
+                  <label data-i18n="hero.amountLabel">টাকার পরিমাণ:</label>
+                  <div class="val" id="demoAmountVal" style="color:var(--color-debt-red)">৳ ৫০০</div>
+                </div>
+                <div class="demo-field-item">
+                  <label data-i18n="hero.noteLabel">নোট:</label>
+                  <div class="val" id="demoNoteVal">দোকানের সদাই</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-prompt-box" id="demoPromptText">
+              “রহিম ভাইয়ের খাতায় ৫০০ টাকা বাকি উঠাবো?”
+            </div>
+
+            <div class="demo-buttons-row">
+              <button class="btn-demo-cancel" id="btnDemoCancel" data-i18n="hero.btnCancel">✕ বাতিল</button>
+              <button class="btn-demo-confirm" id="btnDemoConfirm" data-i18n="hero.btnConfirm">✓ ঠিক আছে</button>
+            </div>
+
+            <div class="demo-toast" id="demoToast" data-i18n="demo.toastSuccess">
+              ✓ লেনদেন সফলভাবে ডিজিটাল খাতায় রেকর্ড হয়েছে!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Core Features Grid
+         ======================================================================== -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag" data-i18n="features.sectionTag">ফিচারসমূহ</span>
+          <h2 class="section-title" data-i18n="features.title">দোকানের বাস্তব প্রয়োজনের কথা ভেবে তৈরি</h2>
+          <p class="section-subtitle" data-i18n="features.subtitle">
+            অপ্রয়োজনীয় জটিল ফিচার ছাড়াই একদম প্রয়োজনীয় সুবিধাসমূহ।
+          </p>
+        </div>
+
+        <div class="features-grid" id="featuresContainer">
+          <!-- Populated by translations -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Download Panel & QR Station
+         ======================================================================== -->
+    <section id="download" class="download-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag" data-i18n="download.sectionTag">ডাউনলোড ও ইনস্টলেশন</span>
+          <h2 class="section-title" data-i18n="download.title">হিসাববট প্রোটোটাইপ আপনার ফোনে ইনস্টল করুন</h2>
+          <p class="section-subtitle" data-i18n="download.subtitle">
+            বর্তমান পরীক্ষামূলক সংস্করণটি অ্যান্ড্রয়েড ডিভাইসের জন্য সরাসরি APK আকারে ডাউনলোডের জন্য প্রস্তুত।
+          </p>
+        </div>
+
+        <div class="download-cards-grid">
+          <!-- Direct APK Card -->
+          <div class="download-action-card">
+            <div>
+              <div class="card-top-header">
+                <div class="android-icon-large">
+                  <svg viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9992.4482.9992.9993 0 .5511-.4482.9997-.9992.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503C15.5802 8.4116 13.8443 8.125 12 8.125s-3.5802.2866-5.1368.8247L4.8409 5.4467a.4161.4161 0 0 0-.5677-.1521.4157.4157 0 0 0-.152 5676l1.9972 3.4592C2.6889 11.1867.343 14.2889 0 17.9622h24c-.343-3.6733-2.6889-6.7755-6.1185-8.6408"/></svg>
+                </div>
+                <div class="card-title-wrap">
+                  <h3 data-i18n="download.apkCardTitle">অ্যান্ড্রয়েড সরাসরি ইনস্টলেশন (APK)</h3>
+                  <p data-i18n="download.apkCardDesc">অ্যান্ড্রয়েড ৮.০ বা তার পরবর্তী যেকোনো ফোনে সরাসরি ইনস্টল করা যাবে।</p>
+                </div>
+              </div>
+
+              <div class="file-meta-pills">
+                <span class="meta-pill" id="fileMetaPill" data-i18n="download.fileMeta">ফাইল সাইজ: ২৭ মেগাবাইট • সংস্করণ: v1.0.0-beta</span>
+                <span class="meta-pill" id="releaseDatePill">রিলিজ: ২৬ অক্টোবর ২০২৬</span>
+              </div>
+            </div>
+
+            <div>
+              <a href="/dokan-voice.apk" id="mainDownloadBtn" class="btn-apk-main-download" download>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                <span data-i18n="download.btnDownload">সরাসরি APK ডাউনলোড করুন</span>
+              </a>
+
+              <a href="#" class="install-guide-trigger" id="openInstallGuideBtn" data-i18n="download.installGuideLink">
+                কীভাবে ফোনে ইনস্টল করবেন? গাইড দেখুন
+              </a>
+            </div>
+          </div>
+
+          <!-- Dynamic QR Code Card -->
+          <div class="qr-code-card">
+            <h3 class="qr-title" data-i18n="download.qrTitle">মোবাইল দিয়ে QR কোড স্ক্যান করুন</h3>
+            <p class="qr-desc" data-i18n="download.qrDesc">
+              ফোনের ক্যামেরা বা QR স্ক্যানার দিয়ে স্ক্যান করলেই সরাসরি ডাউনলোড পেজ চালু হবে।
+            </p>
+
+            <div class="qr-canvas-wrapper" id="qrCanvasContainer">
+              <!-- Dynamically generated QR Code Canvas -->
+            </div>
+
+            <button class="btn-copy-link" id="btnCopyDownloadLink">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span data-i18n="download.copyLinkBtn">লিংক কপি করুন</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Official Stores Coming Soon Row -->
+        <div class="store-status-row">
+          <div class="store-card">
+            <div class="store-info-left">
+              <svg class="store-icon-img" viewBox="0 0 24 24"><path fill="#EA4335" d="M11.9 12.1L3.5 3.7c.3-.3.8-.5 1.3-.5.5 0 1.1.2 1.5.5l9.2 5.3-3.6 3.1z"/><path fill="#FBBC04" d="M15.5 9l3.6 2.1c1 .6 1 1.6 0 2.2L15.5 15.4 12.7 12.6 15.5 9z"/><path fill="#4285F4" d="M3.5 20.3l8.4-8.4 3.6 3.5-9.2 5.3c-.4.3-1 .5-1.5.5-.5 0-1-.2-1.3-.5l0-.4z"/><path fill="#34A853" d="M3.5 3.7c-.3.4-.5 1-.5 1.7v13.2c0 .7.2 1.3.5 1.7L12 12 3.5 3.7z"/></svg>
+              <div>
+                <div class="store-name" data-i18n="download.playstoreTitle">Google Play Store</div>
+                <div class="store-desc" data-i18n="download.playstoreDesc">অফিসিয়াল লিস্টিং বর্তমানে রিভিউর প্রক্রিয়ায় আছে।</div>
+              </div>
+            </div>
+            <span class="coming-soon-badge" data-i18n="download.playstoreStatus">শিগগিরই আসছে (Coming Soon)</span>
+          </div>
+
+          <div class="store-card">
+            <div class="store-info-left">
+              <svg class="store-icon-img" viewBox="0 0 24 24" fill="#000000"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.89c.65-.8 1.09-1.92.97-3.04-.94.04-2.07.63-2.73 1.41-.58.67-1.09 1.78-.95 2.87 1.05.08 2.06-.44 2.71-1.24"/></svg>
+              <div>
+                <div class="store-name" data-i18n="download.appstoreTitle">Apple App Store</div>
+                <div class="store-desc" data-i18n="download.appstoreDesc">আইওএস ভার্সন পরবর্তীতে প্রস্তুত করা হবে।</div>
+              </div>
+            </div>
+            <span class="coming-soon-badge" data-i18n="download.appstoreStatus">শিগগিরই আসছে (Coming Soon)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FAQ Section
+         ======================================================================== -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag" data-i18n="faq.sectionTag">প্রশ্ন ও উত্তর</span>
+          <h2 class="section-title" data-i18n="faq.title">সচরাচর জিজ্ঞাসিত প্রশ্নসমূহ</h2>
+          <p class="section-subtitle" data-i18n="faq.subtitle">
+            হিসাববট সম্পর্কে আপনার মনে থাকা সাধারণ প্রশ্নগুলোর সহজ উত্তর।
+          </p>
+        </div>
+
+        <div class="faq-list" id="faqListContainer">
+          <!-- Populated by translations -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+            <img src="/ic_hisabbot_logo.png" style="width:36px;height:36px;border-radius:8px" alt="Logo">
+            <h4 style="margin:0" data-i18n="nav.brand">হিসাববট</h4>
+          </div>
+          <p data-i18n="footer.tagline">
+            কথা বলেই লিখুন বাকি-জমার হিসাব। ছোট ব্যবসায়ী ও দোকানদার ভাইদের বিশ্বস্ত ডিজিটাল খাতা।
+          </p>
+          <div style="margin-top:1rem;font-size:0.8rem;color:#64748b" data-i18n="footer.brandDesc">
+            HisabBot by KothaBot — বাংলাদেশের দোকানদার ভাইদের জন্য স্থানীয়ভাবে নির্মিত।
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.quickLinksTitle">প্রয়োজনীয় লিংক</h5>
+          <ul class="footer-links-list">
+            <li><a href="#benefits" data-i18n="footer.navWhy">সুবিধাসমূহ</a></li>
+            <li><a href="#how-it-works" data-i18n="footer.navHow">কাজের পদ্ধতি</a></li>
+            <li><a href="#demo" data-i18n="footer.navDemo">লাইভ প্রিভিউ</a></li>
+            <li><a href="#download" data-i18n="footer.navDownload">APK ডাউনলোড</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.legalTitle">আইনি ও গোপনীয়তা</h5>
+          <ul class="footer-links-list">
+            <li><button id="openPrivacyModalBtn" data-i18n="footer.privacyLink">গোপনীয়তা নীতি</button></li>
+            <li><button id="openTermsModalBtn" data-i18n="footer.termsLink">ব্যবহারের শর্তাবলী</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.contactTitle">যোগাযোগ ও সহায়তা</h5>
+          <ul class="footer-links-list">
+            <li><a href="mailto:support@kothabot.ai" id="footerEmailLink" data-i18n="footer.emailSupport">ইমেইল: support@kothabot.ai</a></li>
+            <li><a href="https://wa.me/8801700000000" id="footerWhatsappLink" target="_blank" rel="noopener" data-i18n="footer.whatsappSupport">হোয়াটসঅ্যাপ সাপোর্ট</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div data-i18n="footer.copyright">© ২০২৬ হিসাববট (HisabBot) • সর্বস্বত্ব সংরক্ষিত।</div>
+        <div data-i18n="footer.disclaimer">বিজ্ঞপ্তি: এটি একটি পরীক্ষামূলক সফটওয়্যার সংস্করণ। গুরুত্বপূর্ণ হিসাবের নিয়মিত বিকল্প ব্যাকআপ রাখুন।</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Sticky Mobile Download Action Bar
+       ======================================================================== -->
+  <div class="sticky-mobile-bar" id="stickyMobileBar">
+    <div class="sticky-info-label" data-i18n="stickyMobile.text">হিসাববট প্রোটোটাইপ (Android)</div>
+    <a href="/dokan-voice.apk" class="btn-sticky-download" download data-i18n="stickyMobile.btn">
+      APK ডাউনলোড (২৭MB)
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       Modals: Install Guide, Privacy Policy, Terms of Service
+       ======================================================================== -->
+  <!-- Install Guide Modal -->
+  <div class="modal-overlay" id="installGuideModal">
+    <div class="modal-dialog-box">
+      <div class="modal-header">
+        <h3 data-i18n="installGuide.title">সহজে APK ইনস্টল করার নির্দেশিকা</h3>
+        <button class="modal-close-btn" data-close-modal="installGuideModal">&times;</button>
+      </div>
+      <div class="modal-body" id="installGuideBody">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn-confirm" data-close-modal="installGuideModal" data-i18n="installGuide.closeBtn">বুঝেছি, বন্ধ করুন</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal-dialog-box">
+      <div class="modal-header">
+        <h3 data-i18n="modals.privacyTitle">গোপনীয়তা নীতি (Privacy Policy)</h3>
+        <button class="modal-close-btn" data-close-modal="privacyModal">&times;</button>
+      </div>
+      <div class="modal-body" data-i18n="modals.privacyText">
+        <!-- Privacy text -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn-confirm" data-close-modal="privacyModal" data-i18n="modals.closeBtn">বন্ধ করুন</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms of Service Modal -->
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-dialog-box">
+      <div class="modal-header">
+        <h3 data-i18n="modals.termsTitle">ব্যবহারের শর্তাবলী (Terms of Service)</h3>
+        <button class="modal-close-btn" data-close-modal="termsModal">&times;</button>
+      </div>
+      <div class="modal-body" data-i18n="modals.termsText">
+        <!-- Terms text -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn-confirm" data-close-modal="termsModal" data-i18n="modals.closeBtn">বন্ধ করুন</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice">লিংক কপি হয়েছে!</div>
+
+  <!-- Main JavaScript App -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

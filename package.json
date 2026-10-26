@@ -1,0 +1,17 @@
+{
+  "name": "hisab-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && rm -f dist/dokan-voice.apk",
+    "preview": "vite preview",
+    "deploy": "npm run build && CLOUDFLARE_ACCOUNT_ID=f7b63a9b274f43bd60919b91973a0d90 wrangler pages deploy dist --project-name hisab-landing --commit-dirty=true"
+  },
+  "devDependencies": {
+    "qrcode": "^1.5.4",
+    "vite": "^6.2.0",
+    "wrangler": "^4.152.0"
+  }
+}
