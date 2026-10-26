@@ -351,8 +351,8 @@ function setupEventListeners() {
     openModal('installGuideModal');
   });
 
-  openPrivacyModalBtn.addEventListener('click', () => openModal('privacyModal'));
-  openTermsModalBtn.addEventListener('click', () => openModal('termsModal'));
+  if (openPrivacyModalBtn) openPrivacyModalBtn.addEventListener('click', () => openModal('privacyModal'));
+  if (openTermsModalBtn) openTermsModalBtn.addEventListener('click', () => openModal('termsModal'));
 
   document.querySelectorAll('[data-close-modal]').forEach((btn) => {
     btn.addEventListener('click', () => {
